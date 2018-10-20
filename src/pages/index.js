@@ -7,7 +7,7 @@ const IndexPage = () => (
     <span className="logo">
       <Logo />
     </span>
-    <p>Hi! I'm <strong>Christian Kopač,</strong></p>
+    <p>Hi! I'm <strong>Christian Kopač</strong>,</p>
     <p>Web Developer from Buenos Aires based in Berlin.</p>
     <style jsx>
       {`
