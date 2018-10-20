@@ -16,7 +16,7 @@ class Layout extends React.Component {
           <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
         </Helmet>
 
-        <main className="main">
+        <main>
           {this.props.children}
         </main>
 
@@ -56,7 +56,7 @@ class Layout extends React.Component {
               text-decoration: none;
               color: #00FF57;
             }
-            .main a:hover {
+            main a:hover {
               background-color: black;
             }
             .container {
@@ -72,7 +72,7 @@ class Layout extends React.Component {
                 'nav'
                 'footer';
             }
-            .main {
+            main {
               max-width: 750px;
               margin: 0 auto;
               grid-area: main;
@@ -89,6 +89,8 @@ class Layout extends React.Component {
             .back:hover {
               background-color: black;
             }
+
+
           `}
         </style>
       </div>

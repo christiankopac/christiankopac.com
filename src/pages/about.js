@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 
 const AboutPage = () => (
   <Layout>
-
+  <div className="content">
     <p>Hi! I'm Christian!</p>
 
     <p>I was born and raised in Buenos Aires, Argentina, in the middle of a little Slovenian diaspora</p>
@@ -25,8 +25,12 @@ const AboutPage = () => (
     <p>Currently open to new opportunities.</p>
 
     <p>PS: Don't forget to follow me on <a href="https://twitter.com/teatang">twitter</a> and check the <a target="_blank" href="https://github.com/christiankopac/christiankopac.com">source code</a> of this website, maybe even a PR?</p>
+    </div>
     <style jsx>
       {`
+      .content {
+        padding: 0 1rem;
+      }
         .logo {
           width: 200px;
           margin: 0 auto;

@@ -9,11 +9,10 @@ export default ({ data }) => {
   }
   return (
     <Layout>
+      <div className='blog'>
       <h1 className="blog-title">Blog</h1>
       <h4 className="blog-subtitle">{data.allMarkdownRemark.totalCount} Posts</h4>
-
       <section className="blog-list">
-
         {data.allMarkdownRemark.edges.map(({ node, index }) => (
           <article key={`post-${node.id}`} className="article {this.state.active ? 'active' :''}">
             <time className="pubdate" pubdate="true" dateTime="2018-10-10">
@@ -117,6 +116,7 @@ export default ({ data }) => {
                   }
         `}
         </style>
+        </div>
     </Layout>
   )
 }

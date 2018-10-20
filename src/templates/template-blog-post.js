@@ -7,6 +7,7 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+    <div className="blog-post">
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <p>Posted on: {post.frontmatter.date}</p>
@@ -15,22 +16,16 @@ export default ({ data }) => {
         return <Link id={tag} to={`/tags/${kebabCase(tag.fieldValue)}/`}>{tag} </Link>
         })}
       </p>
-      <p></p>
-      <style jsx global>{`
-
-    `}
-      </style>
       <style jsx>{`
-                  @media screen and (max-width: 600px) {
-                    .main {
-                      padding: 1rem 0;
-                    }
-                  }
-                  a:hover {
-                    text-decoration: underline;
-                    background-color: black;
-                  }
+      .blog-post {
+        padding: 0 1rem;
+      }
+      a:hover {
+        text-decoration: underline;
+        background-color: black;
+      }
       `}</style>
+    </div>
     </Layout>
   )
 }
