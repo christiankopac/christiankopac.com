@@ -21,6 +21,11 @@ export default ({ data }) => {
     `}
       </style>
       <style jsx>{`
+                  @media screen and (max-width: 600px) {
+                    .main {
+                      padding: 1rem 0;
+                    }
+                  }
                   a:hover {
                     text-decoration: underline;
                     background-color: black;
