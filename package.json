@@ -1,8 +1,8 @@
 {
   "name": "ck-portfolio",
-  "description": "Christian Kopac's - portfolio and blog",
+  "description": "Christian Kopač - portfolio and blog",
   "version": "1.0.0",
-  "author": "Christian Kopac <christian.kopac@gmail.com>",
+  "author": "Christian Kopač <christian.kopac@gmail.com>",
   "dependencies": {
     "es6-object-assign": "^1.1.0",
     "gatsby": "^2.0.0-beta.70",
@@ -33,7 +33,8 @@
     "styled-jsx": "^3.1.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio"
   ],
   "license": "MIT",
   "scripts": {
