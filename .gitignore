@@ -1,6 +1,8 @@
 # Project dependencies
 .cache
 node_modules
+
+# Yarn
 yarn-error.log
 
 # Build directory
