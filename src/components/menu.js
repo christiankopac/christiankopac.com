@@ -55,6 +55,7 @@ class Menu extends React.Component {
                     .nav {
                       display: flex;
                       justify-content: space-between;
+                      padding-bottom: 3rem;
                     }
                     .nav > a {
                       font-size: 1.3rem;

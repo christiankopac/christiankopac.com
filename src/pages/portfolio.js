@@ -31,6 +31,12 @@ export default ({ data, location }) => {
         </article>
         ))}
         </section>
+        <style jsx>
+        {`
+        h4 {
+          padding-left: 1rem;
+        }
+          `}</style>
             <style jsx global>{`
     .section-title {
       text-align: center;
