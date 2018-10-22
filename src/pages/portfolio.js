@@ -65,14 +65,15 @@ export default ({ data, location }) => {
     .article:nth-of-type(1n+0) {
       background-color: #FF00A8;
     }
-    // multiples of 3
-    .article:nth-of-type(3n+0) {
-      background-color: #FFE600;
-    }
+
     // multiples of 2
     .article:nth-of-type(2n+0) {
       background-color: #00FF66;
       color: white;
+    }
+    // multiples of 3
+    .article:nth-of-type(3n+0) {
+      background-color: #FFE600;
     }
     .article:nth-of-type(2n+0) h1,
     .article:nth-of-type(2n+0) .tags a {
