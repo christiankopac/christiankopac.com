@@ -55,6 +55,9 @@ export default ({ data }) => {
                   .blog-title {
                     text-align: center;
                   }
+                  .blog-subtitle {
+                    padding-left: 1rem;
+                  }
                   .pubdate {
                     font-family: 'Work Sans', sans-serif;
                     grid-area: "date";

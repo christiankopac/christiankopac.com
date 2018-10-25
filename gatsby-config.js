@@ -30,16 +30,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-56334552-8",
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
+        trackingId: `UA-56334552-8`,
+        head: true,
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
           families: ['Work Sans:latin-ext', 'Merriweather:latin-ext']
@@ -54,7 +50,7 @@ module.exports = {
             resolve: `gatsby-remark-emojis`,
             options: {
               active: true,
-              class: 'emoji-icon',
+              class: `emoji-icon`,
               // Select the size (available size: 16, 24, 32, 64)
               size: 64,
               styles: {
@@ -100,7 +96,6 @@ module.exports = {
                 siteUrl
               }
             }
-
             allSitePage {
               edges {
                 node {
