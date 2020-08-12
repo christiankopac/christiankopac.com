@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ac5f157d-30b9-4791-9cf2-f0576158c09a/deploy-status)](https://app.netlify.com/sites/imaginaryradiostations/deploys)
+
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
