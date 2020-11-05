@@ -6,7 +6,7 @@ const Aside: FC = () => {
   const [colorMode, setColorMode] = useColorMode()
   return (
     <aside className="aside">
-      <Box pt="2em" sx={{ display: "flex", justifyContent: "center" }}>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Button
           sx={{
             border: "none",
