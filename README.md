@@ -12,6 +12,75 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
+## TODO
+
+
+- [x] light/dark mode switch
+- [x] mdx support
+- [x] theme-ui
+- [x] blog listing
+  - [x] single blog post
+- [x] music listing
+  - [x] single music post
+- [x] CSS-in-JS
+
+- [ ] text now
+- [ ] text about
+- [ ] cv!
+- [ ] post music!!
+  - [ ] rs
+  - [ ] soundcloud
+  - [ ] bandcamp
+  - [ ] discogs
+  - [ ] production / gear
+- [ ] post dev
+  - [ ] typescript
+  - [ ] react
+  - [ ] webpack
+  - [ ] tmux
+  - [ ] byobu
+  - [ ] terminator / kitty
+  - [ ] vim / emacs / vscode
+  - [ ] lazygit
+  - [ ] nas
+  - [ ] docker
+  - [ ] aws / gcp
+- [ ] productivity
+  - [ ] blogging
+  - [ ] writing
+  - [ ] yoga
+  - [ ] sleep
+  - [ ] food
+
+- [ ] PWA
+- [ ] netlify deployment
+- [ ] code highlighting
+- [ ] offline support (WebApp, Manifest, SEO)
+- [ ] social links
+
+- [ ] rss feed
+- [ ] reading time
+- [ ] reading progress
+- [ ] analytics
+- [ ] seo
+
+- [ ] testing
+- [ ] storybook
+- [ ] accesibility
+
+- [ ] pagination
+
+Setup and configure
+
+- [ ] "gatsby-plugin-manifest": "^2.2.4",
+- [ ] "gatsby-plugin-offline": "^2.2.4",
+
+- [ ] for transforming images: "gatsby-plugin-sharp": "^2.2.9",
+- [ ] for transforming images: "gatsby-transformer-sharp": "^2.2.5",
+
+- [ ] for SEO "gatsby-plugin-react-helmet": "^3.1.3",
+- [ ] for SEO "react-helmet": "^5.2.1"
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
