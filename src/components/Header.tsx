@@ -6,20 +6,20 @@ import { Link } from "gatsby"
 
 const routes = [
   {
-    href: "/blog",
-    title: "blog",
+    href: "/about",
+    title: "about",
   },
   {
     href: "/music",
     title: "music",
   },
   {
-    href: "/now",
-    title: "now",
+    href: "/blog",
+    title: "blog",
   },
   {
-    href: "/about",
-    title: "about",
+    href: "/now",
+    title: "now",
   },
 ]
 
