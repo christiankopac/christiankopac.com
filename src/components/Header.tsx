@@ -39,6 +39,8 @@ const Header: FC<any> = props => {
           top: 0,
           textTransform: "uppercase",
           fontSize: "2em",
+          margin: "0",
+          marginTop: "2em",
           position: "fixed",
         }}
       >
@@ -46,7 +48,7 @@ const Header: FC<any> = props => {
           sx={{
             listStyle: "none",
             transform: "rotate(-90deg)",
-            paddingTop: "10px",
+            paddingTop: "0",
           }}
         >
           <Link fade to="/">

@@ -13,7 +13,10 @@ const Aside: FC = () => {
             border: "none",
             backgroundColor: colorMode === "dark" ? "white" : "black",
             color: colorMode === "dark" ? "black" : "white",
-            width: "80px",
+            width: "60px",
+            height: "60px",
+            borderRadius: "60px",
+            fontSize: "0.7em",
             textAlign: "center",
             position: "fixed",
           }}
