@@ -34,13 +34,14 @@ const PostPreview = props => {
               style={{
                 textDecoration: "none",
                 flexDirection: "row",
-                border: "1px solid red",
+                border: "1px solid #b2b2b2",
                 borderRadius: "5px",
                 fontFamily: "monospace",
                 fontSize: "1em",
                 opacity: "0.6",
                 padding: "10px",
                 margin: "0 3px",
+                color: "#ff6347",
               }}
             >
               {tag}
