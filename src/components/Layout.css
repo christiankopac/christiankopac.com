@@ -36,7 +36,6 @@
 .aside {
   grid-area: aside;
   justify-items: "flex-end";
-  padding: 1em;
 }
 
 .footer {
