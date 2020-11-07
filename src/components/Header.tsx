@@ -26,20 +26,27 @@ const routes = [
 const Header: FC<any> = props => {
   const [colorMode] = useColorMode()
   return (
-    <header {...props}>
+    <header
+      {...props}
+      sx={{
+        height: [null, "100%"],
+        padding: ["1em", null],
+        marginTop: [null, "1em"],
+      }}
+    >
       <ul
         sx={{
           display: ["flex", "grid"],
           flexWrap: ["wrap", null],
           gridAutoFlow: [null, "column"],
           width: ["100%", "100vh"],
-          justifyContent: ["space-between", "space-around"],
+          justifyContent: ["space-between", "space-evenly"],
+          paddingTop: [null, "2em"],
           fontSize: ["1.5em", "2em"],
-          marginTop: [null, "2em"],
-          padding: ["1em", "1em 0"],
+          paddingLeft: 0,
           transform: [
             "rotate(0)",
-            "rotate(90deg) translateX(-148px) translateY(0)",
+            "rotate(90deg) translateX(-214px) translateY(0)",
           ],
           transformOrigin: [null, "bottom left"],
           alignItems: "center",
