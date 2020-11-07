@@ -12,7 +12,7 @@
 
 @media screen and (max-width: 66em) {
   .wrapper {
-    grid-template-rows: 10% 80% 5% 5%;
+    grid-template-rows: 10% 80% 5% 3%;
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
@@ -40,6 +40,8 @@
 
 .footer {
   grid-area: footer;
-  padding: 1em;
+  padding: 2em 1em;
+  margin-top: 2em;
   text-align: center;
+  border-top: 1px solid tomato;
 }
