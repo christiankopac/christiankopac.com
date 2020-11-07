@@ -11,6 +11,8 @@ const PostPreview = props => {
       sx={{
         color: colorMode === "black" ? "background" : "text",
         textDecoration: "none",
+        backgroundColor: "rbgba(59,59,59,0.2)",
+        display: "inherit",
       }}
     >
       <Box
