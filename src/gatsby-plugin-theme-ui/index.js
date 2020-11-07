@@ -66,7 +66,8 @@ export default {
     },
     h1: {
       color: "primary",
-      fontSize: "9",
+      fontSize: "8",
+      marginTop: ".2em",
     },
     h2: {
       color: "secondary",
