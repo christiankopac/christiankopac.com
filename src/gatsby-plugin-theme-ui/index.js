@@ -3,7 +3,7 @@ import { base } from "@theme-ui/presets"
 export default {
   ...base,
   useLocalStorage: true,
-  breakpoints: ["40em", "56em", "64em"],
+  breakpoints: ["66em", "66em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   links: {
     nav: {
@@ -18,12 +18,12 @@ export default {
     background: "#fff",
     primary: "#ff6347",
     secondary: "#b2b2b2",
-    text: "#000",
+    text: "#1b1b1b",
     muted: "#f6f6f6",
     modes: {
       dark: {
         text: "#fff",
-        background: "#000",
+        background: "#1b1b1b",
         active: "#444",
         primary: "#ff6347",
         secondary: "#b2b2b2",

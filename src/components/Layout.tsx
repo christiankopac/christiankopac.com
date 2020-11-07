@@ -7,15 +7,6 @@ import Footer from "./Footer"
 import "./Layout.css"
 
 const Layout: FC = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
   return (
     <div className="wrapper">
       <Header className="header" />

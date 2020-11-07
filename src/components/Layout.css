@@ -10,7 +10,7 @@
   min-height: 100vh;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 66em) {
   .wrapper {
     grid-template-rows: 10% 80% 5% 5%;
     grid-template-columns: 1fr;
@@ -30,7 +30,7 @@
 .main {
   grid-area: main;
   overflow: hidden;
-  padding: 4em;
+  padding: 2em 1em;
 }
 
 .aside {
