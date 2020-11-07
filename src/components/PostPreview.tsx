@@ -11,13 +11,21 @@ const PostPreview = props => {
       sx={{
         color: colorMode === "black" ? "background" : "text",
         textDecoration: "none",
-        backgroundColor: "rgba(59,59,59,0.2)",
+        backgroundColor:
+          colorMode === "dark" ? "rgba(59,59,59,0.2)" : "rgba(59,59,59,0.1)",
         display: "inherit",
+        "&:hover": {
+          backgroundColor:
+            colorMode === "dark"
+              ? "rgba(255,99,71,0.7)"
+              : "rgba(255,99,71,0.1)",
+        },
       }}
     >
       <Box
         style={{
-          border: "1px solid #333",
+          border: "1px solid rgba(59,59,59,0.3)",
+          borderRadius: "5px",
           margin: "20px 0",
           padding: "0 1em 2em 2em",
         }}
