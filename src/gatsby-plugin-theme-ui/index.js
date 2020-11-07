@@ -66,12 +66,12 @@ export default {
     },
     h1: {
       color: "primary",
-      fontSize: "8",
+      fontSize: ["7", "8"],
       marginTop: "-.1em",
     },
     h2: {
       color: "secondary",
-      fontSize: "7",
+      fontSize: ["5", "7"],
     },
     h3: {
       fontSize: "6",

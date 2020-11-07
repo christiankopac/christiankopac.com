@@ -8,28 +8,15 @@ const FullscreenModal: FC = props => {
   const [fullScreen, setFullScreen] = useState(false)
   const toggleFullScreen = () => setFullScreen(prevState => !prevState)
   return (
-    <Flipper flipKey={fullScreen}>
+    <Flipper flipKey={fullScreen} spring={{ stiffness: 280, damping: 22 }}>
       <Flipped flipId="square">
         <div
           onClick={toggleFullScreen}
           className={fullScreen ? "fullscreen" : "normal"}
         >
-          {/* Render footer */}
-          {!fullScreen && props.children}
-          {/* Render full screen modal */}
+          ?
           {fullScreen && (
-            <Flex
-              className="fullscreen"
-              sx={{
-                flexDirection: "column",
-                alignItems: "center",
-                top: "50%",
-                position: "relative",
-                left: "25%",
-                color: "white",
-                width: "50%",
-              }}
-            >
+            <Flex className="fullscreen">
               <Box>
                 <Heading as="h1" sx={{ color: "white", fontSize: "4em" }}>
                   BLACK LIVES MATTER

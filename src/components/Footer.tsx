@@ -15,9 +15,7 @@ const Footer: FC<FooterProps> = props => {
         Christian Kopač &copy; {date.getFullYear()}
       </Text>
       <br />
-      <FullscreenModal>
-        <em>?</em>
-      </FullscreenModal>
+      <FullscreenModal />
     </footer>
   )
 }
