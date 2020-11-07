@@ -32,7 +32,7 @@ const FullscreenModal: FC = props => {
             >
               <Box>
                 <Heading as="h1" sx={{ color: "white", fontSize: "4em" }}>
-                  #BlackLivesMatter
+                  BLACK LIVES MATTER
                 </Heading>
                 <br />
               </Box>
