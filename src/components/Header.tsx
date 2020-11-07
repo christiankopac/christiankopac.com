@@ -29,7 +29,6 @@ const Header: FC<any> = props => {
     <header
       {...props}
       sx={{
-        height: [null, "100%"],
         padding: ["1em", null],
         marginTop: [null, "1em"],
         position: [null, "fixed"],
