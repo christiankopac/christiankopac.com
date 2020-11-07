@@ -18,7 +18,7 @@ const Aside: FC = () => {
             fontSize: "0.7em",
             textAlign: "center",
             margin: "0",
-            position: [null, null, "fixed"],
+            position: [null, "fixed"],
           }}
           onClick={e => {
             e.preventDefault()
