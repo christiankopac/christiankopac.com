@@ -17,7 +17,7 @@ const Aside: FC = () => {
             borderRadius: "60px",
             fontSize: "0.7em",
             textAlign: "center",
-            margin: "0",
+            margin: "0 auto",
             position: [null, "fixed"],
             outline: "none",
           }}
