@@ -2,7 +2,7 @@ import path from 'path'
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-import config from '../config'
+// import config from '../config'
 
 // const getSchemaOrgJSONLD = ({
 //   isBlogPost,
@@ -136,4 +136,4 @@ import config from '../config'
 //   postImage: null,
 // };
 
-export default SEO
+// export default SEO
