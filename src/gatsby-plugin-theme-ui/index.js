@@ -1,6 +1,6 @@
 // src/gatsby-plugin-theme-ui/index.js
 import { base } from "@theme-ui/presets"
-export default {
+const theme = {
   ...base,
   useLocalStorage: true,
   breakpoints: ["66em", "66em"],
@@ -106,3 +106,5 @@ export default {
     },
   },
 }
+
+export default theme

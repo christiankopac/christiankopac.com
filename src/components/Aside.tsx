@@ -21,7 +21,7 @@ const Aside: FC = () => {
             position: [null, "fixed"],
             outline: "none",
           }}
-          onClick={e => {
+          onClick={(e: { preventDefault: () => void }) => {
             e.preventDefault()
             setColorMode(colorMode === "dark" ? "light" : "dark")
           }}

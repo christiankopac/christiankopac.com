@@ -16,4 +16,10 @@
     "titleBar.inactiveForeground": "#15202b99"
   },
   "peacock.color": "#8FBC8F",
+  "cSpell.words": [
+    "gsap",
+    "iframe",
+    "prismjs",
+    "shortcodes"
+  ],
 }

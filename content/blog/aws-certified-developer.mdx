@@ -1,0 +1,254 @@
+---
+title: "srsly"
+tags: ["mentira"]
+date: "2020-11-12"
+slug: "music-3"
+category: "music"
+excerpt: "Uno nunca tiene miedo de los desconocido; uno tiene miedo de lo conocido llegando a su fin"
+---
+
+# AWS Certified Developer - Associate 2020
+
+https://aws.amazon.com/certification/certified-developer-associate/
+
+## About the exam
+
+Exam contents:
+
+- Deployment (22%)
+- Security (26%)
+- Development with AWS Services (30%)
+- Refactoring (10%)
+- Monitoring and troubleshooting (12%)
+
+Exam details:
+
+- 130 minutes
+- 65 questions
+- Passmark is 720/1000
+- 150 usd
+- Multiple choice scenario based questions
+
+## IAM
+
+- CENTRALIZED: control of you aws account
+- ACCESS: shared acces to your aws account
+- PERMISSIONS: granular permissions
+- IDENTITY FEDERATION: supports federated access
+
+- MULTI-FACTOR-AUTHENTICATION
+- TEMPORARY ACCESS: temporary access to your aws account
+- PASSWORD POLICIES
+- INTEGRATED
+- COMPLIANCE
+
+- Users: end users, think people
+- Groups: collection of users under one set of permissions
+- Roles: you can create roles and assign them to users,
+  applications and services
+- IAM Policy: a document that defines one or more permissions
+
+<!-- IAM DEMO: MFA, Create user, groups, policies, roles... -->
+
+[AWS Policy Simulator](https://policysim.aws.amazon.com)
+
+### IAM Exam tips
+
+- IAM Policy simulator
+
+  - Test IAM permissions before you commit them to production
+  - Validate that the policy works as expected
+  - You can test policies attached to existing users
+
+- IAM consists of USERS, GROUPS and ROLES
+- Policy document (JSON), series of key value pairs with permissions
+- IAM is universal, not regional
+- The root account is created when you first register with AWS (complete admin access)
+- Users have no permissions at all when created
+
+- New users
+
+  - Access key ID and secret access key
+  - Not for console access
+  - Programmatic Access
+
+- Viewing Access Keys, possible only once, when created!
+- Use MFA
+- Password roration
+
+## EC2 (Elastic Compute Cloud)
+
+- Secure, resizable compute capacity in the cloud
+- Like a VM, hosted on AWS
+- Designed to make web-scale cloud computing for developer
+- The capacity you want when you need it
+- You are in complete control of your own instances
+
+Benefits:
+
+- Game changer
+- Pay only for what you use
+- No wasted capacity
+- EC2 is like a VM hosted on AWS instead of you own data center.
+
+### EC2 Pricing Options
+
+- On-demand
+  Pay by the hour or the second depending on the instance type
+
+  1. Flexible: Low cost and flexibility of Amazon EC2 without long term commitment
+  2. Short-term
+  3. Testing the water
+
+- Reserved
+  Reserve capacity for one or three years with an up to 72% discount of the hourly charge.
+  Great if you have known, fixed requirements
+  Operate at a regional level
+
+  1. Predictable usage
+  2. Specific capacity requirements
+  3. Pay up-front
+  4. Standard Reserved Instances (RIs) up to 72% off on-demand price
+  5. Convertible RIs, up to 54% off on-demand price
+  6. Schedule RIs: launch within the time window you define
+
+- Spot
+  Purchase unused capacity at a discount up to 90%.
+
+  When:
+
+  1. Users with an urgent need for large ammounts of computing capacity
+  2. Application that have flexible start and end times
+  3. Applications that are only feasibal eat very low compute prices
+
+- Dedicated
+  A physical EC2 server
+  Great if you have server-bound licenses to reuse or compliance requirements.
+
+  When:
+
+  1. Compliance
+  2. Licencisng
+  3. On-Demand
+  4. Reserved
+
+[AWS Pricing Calculator](https://calculator.aws)
+
+### Savings plan:
+
+- Save up to 72%
+- Commit to one or three years
+- Super Flexible (technologies like Lambda or Fargate)
+
+### EC2 Instance Types
+
+- Hardware
+  When you launch an instance the typ determines the hardware of the ost computer
+- Capabilites
+  Each type offers different compute memory and storage capabilities
+- Application requiremens
+  Select an instance based on the requirements of the application you plan to run on the instance
+
+Example:
+
+- AWS Dashboard
+- EC2
+- Launch instance
+- Amazon Linux 2
+
+<!-- LAUNCH EC2 INSTANCE DEMO -->
+
+## EBS Volumes
+
+[Elastic Block Store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html)
+
+Storage volumes that you can attach to your EC2 instances
+
+EBS Volume Types:
+
+- General Purpose SSD **gp2**: 3 IOPS per GB, great for applications not latency sensitive
+- Provisioned IOPS SSD: **io1**, **io2**
+  - io1: 50 IOPS per GB
+  - io2: 500 IOPS per GB
+  - I/O intensive apps
+- Throughput Optimized HDD: **st1**
+  - Low cost HDD volume
+- Cold HDD **sc1**
+  - Lowest cost option
+  - Good for applications that need the lowest cost and performance is not a factor
+  - Good choice for data requireign fewer scans per day
+
+| IOPS                                                                               | Throughut                                                             |
+| ---------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Measures the number of read and write operations per second.                       | Measures the number of bits read or written per second                |
+| Important metric for quick transactions, low latency apps, transactional workloads | Important metric for larga datasets, large I/O sizes, complex queries |
+| The ability to actin reads and writes very quickly                                 | The ability to deal with large datasets                               |
+| Choose provisions IPS SSD (io2 or io2)                                             | Choose Throughput Optimized HDD (st1)                                 |
+
+### EBS Exam Tips
+
+- Highly availably and scalable storage volumes you can attach to your EC2 instancen
+- gp2: suitable for boot disks and general application (up to 15.0000 IOPS per volume)
+- io1: suitable for OLTP and latency sensitive application, 50 IOPS/GB, up to 64.0000 IOPS per volume, high performance and most expensive
+- io1: suitable for OLTP and latency sensitive application, 500 IOPS/GB, up to 64.0000 IOPS per volume, high performance and most expensive
+- st1: suitable for big data, data warehoises, ETL. 500MBs per volume
+- sc1 (cold HDD): max of 250MBs per volume, less frequently accessed data
+
+<!-- EBS VOLUME DEMO -->
+
+## Elastic Load Balancer
+
+Distributes network traffic across a group of servers.
+
+- Application load balancer (HTTP and TCP) - Layer 7
+- Network load balancer (TCP and high performance) - Layer 4
+- Classic load balancer (HTTP, HTTPS and TCP) - ???
+  Legacy, HTTP, HTTPS, TCP, Supports Layer 7 and Layer 4
+
+- Layer 7: Application
+  What the end user sees, HTTP, web browsers.
+- Layer 6: Presentation
+  Data is in usable format. Encryption, SSH
+- Layer 5: Session
+  Maintains connections and sessions
+- Layer 4: Transport
+  Transmits data using TCP and UDP
+- Layer 3: Network
+  Logically routes packets based on IP address
+- Layer 2: Data Link
+  Physically transmits data based on MAC addresses
+- Layer 1: Physical
+  Transmits bits and bytes over physical devices
+
+### ELB Exam Tips
+
+- `XForwardedFor` header is used to know the client IP address
+- `504 Error` the application is not responding within the timeout period
+
+## Route 53
+
+Amazon's DNS Serice.
+
+Map a domain to:
+
+- EC2
+- S3 buckets
+- Load Balancers
+
+## CLI
+
+## S3
+
+## Serverless Computing
+
+## DynamoDB
+
+## KMS & Encryption on AWS
+
+## Other AWS services
+
+## Deveoper Theory
+
+## Advanced IAM
+
+## Monitoring

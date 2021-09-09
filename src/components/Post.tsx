@@ -6,7 +6,6 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import PropTypes from "prop-types"
 const shortcodes = { Link }
-import MySpringTransition from "./MySpringTransition"
 import { useTransition, animated } from "react-spring"
 
 const PostTemplate = ({ data: { mdx } }) => {
