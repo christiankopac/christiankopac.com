@@ -5,7 +5,7 @@ excerpt: "My point of _Vue_ on Vue."
 slug: "vuejs"
 date: "2021.08.19"
 category: "blog"
-status: published
+status: "draft"
 ---
 
 ## Essentials
@@ -32,13 +32,13 @@ status: published
 
 ### Explanation of different builds
 
-**:black_heart: Muy importante!**
+⚠️ Muy importante!
 
 - <https://v3.vuejs.org/guide/installation.html#explanation-of-different-builds>
 
 ### Runtime + Compiler vs Runtime-only
 
-**:black_heart: Muy importante!**
+⚠️ Muy importante!
 
 <https://v3.vuejs.org/guide/installation.html#runtime-compiler-vs-runtime-only>
 
@@ -152,7 +152,7 @@ All lifecycle hooks are called with their `this` context pointing to the current
   - Raw HTML
     `<p>Using mustaches: {{ rawHtml }}</p>`
     `<p>Using v-html directive: <span v-html="rawHtml"></span></p>`
-    - > Dynamically rendering arbitrary HTML on your website can be very dangerous because it can easily lead to XSS vulnerabilities (opens new window). Only use HTML interpolation on trusted content and never on user-provided content
+    > Dynamically rendering arbitrary HTML on your website can be very dangerous because it can easily lead to XSS vulnerabilities (opens new window). Only use HTML interpolation on trusted content and never on user-provided content
 - Attributes
   - `v-bind` directive
 - Using JavaScript expressions
@@ -191,7 +191,7 @@ All lifecycle hooks are called with their `this` context pointing to the current
 > To add methods to a component instance we use the `methods` option.
 > Vue automatically binds the `this` value for `methods` so that it always refers to the component instance.
 
-**:black_heart: Muy importante!**
+⚠️ Muy importante!
 
 > You should avoid using arrow functions when defining `methods`, as that prevents Vue from binding the appropriate `this` value.
 
@@ -285,7 +285,7 @@ computed: {
 
 #### Watcher
 
-> Vue provides a more generic way to react to data changes through the `watc`h option.
+> Vue provides a more generic way to react to data changes through the `watch` option.
 > This is most useful when you want to perform asynchronous or expensive operations in response to changing data.
 
 ```javascript
