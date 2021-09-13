@@ -3,11 +3,15 @@ import { jsx } from "theme-ui"
 import SEO from "../components/seo"
 import PostPreview from "../components/PostPreview"
 
-<SEO title="404: Not found" />
+<SEO title="Blog" />
 
-# BLOG: Not Found
+# Blog
 
-You just hit a route that doesn&#39;t exist... the sadness.
+Here I usually keep some of the learning related to personal projects, development and other technical stuff.
+
+This shall by considered a living document and a personal reference or go-to place for the technologies I'm currently using.
+
+🏗️
 
 <ul style={{ padding: 0 }}>
   {props.data.allMdx.nodes.map(node => (
@@ -19,7 +23,13 @@ You just hit a route that doesn&#39;t exist... the sadness.
 
 export const pageQuery = graphql`
   query {
-    allMdx(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
+    allMdx(
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: {
+        frontmatter: { status: { eq: "published" } }
+        fileAbsolutePath: { regex: "/blog/" }
+      }
+    ) {
       nodes {
         slug
         frontmatter {

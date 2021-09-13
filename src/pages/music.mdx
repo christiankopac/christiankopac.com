@@ -3,11 +3,22 @@ import { jsx } from "theme-ui"
 import SEO from "../components/seo"
 import PostPreview from "../components/PostPreview"
 
-<SEO title="404: Not found" />
+<SEO title="Music" />
 
-# MUSIC: Not Found
+# Music
 
-You just hit a route that doesn&#39;t exist... the sadness.
+Music has alway been a big and important part of my life, as with [many other human beings](https://en.wikipedia.org/wiki/History_of_music).
+
+Since 2014, I'm a member of the music editorial at [Radio Študent](https://www.radiostudent.si/).
+
+In 2017 I co-founded [Imaginary Radio Stations](https://imaginaryradiostations.com/), a series of events and mixes with the aim to provide a space for music free from genre restrictions
+and limitations in the context of the city of Berlin, which is nowadays filled with _mainstream_ techno and house music.
+
+I spend some of my free time in the studio, recording and producing music under the moniker [CP-AK](https://soundcloud.com/cp-ak).
+
+When I'm not producing music, I'm usually out in the nature either learning about Berlin's [inbetween_nature](https://www.instagram.com/inbetween_nature/)'s spaces, walking the dog, a beatiful and lovely [Lagotto Romagnolo](https://en.wikipedia.org/wiki/Lagotto_Romagnolo) called _Tilla_ or running.
+
+Below you can find some of the music selections I've made for the radio station as well as some of the mixes recorded on the _IRS_ events or notes on my learning in music theory.
 
 <ul style={{ padding: 0 }}>
   {props.data.allMdx.nodes.map(node => (
@@ -19,7 +30,13 @@ You just hit a route that doesn&#39;t exist... the sadness.
 
 export const pageQuery = graphql`
   query {
-    allMdx(filter: { fileAbsolutePath: { regex: "/music/" } }) {
+    allMdx(
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: {
+        frontmatter: { status: { eq: "published" } }
+        fileAbsolutePath: { regex: "/music/" }
+      }
+    ) {
       nodes {
         slug
         frontmatter {

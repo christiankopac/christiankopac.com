@@ -2,6 +2,7 @@
 import { base } from "@theme-ui/presets"
 const theme = {
   ...base,
+  initialColorModeName: "dark",
   useLocalStorage: true,
   breakpoints: ["66em", "66em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -15,14 +16,14 @@ const theme = {
     },
   },
   colors: {
-    background: "#fff",
+    background: "#F8F9FC",
     primary: "#ff6347",
     secondary: "#b2b2b2",
     text: "#1b1b1b",
     muted: "#f6f6f6",
     modes: {
       dark: {
-        text: "#fff",
+        text: "#F8F9FC",
         background: "#1b1b1b",
         active: "#444",
         primary: "#ff6347",
@@ -32,12 +33,11 @@ const theme = {
     },
   },
   fonts: {
-    body:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: "inherit",
     monospace: "Menlo, monospace",
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96, 128],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -66,27 +66,27 @@ const theme = {
     },
     h1: {
       color: "primary",
-      fontSize: ["7", "8"],
+      fontSize: 7,
       marginTop: "-.1em",
     },
     h2: {
       color: "secondary",
-      fontSize: ["5", "7"],
+      fontSize: 6,
     },
     h3: {
-      fontSize: "6",
+      fontSize: 5,
       color: "secondary",
     },
     h4: {
-      fontSize: "5",
+      fontSize: 4,
       color: "secondary",
     },
     h5: {
-      fontSize: "4",
+      fontSize: 3,
       color: "secondary",
     },
     h6: {
-      fontSize: "3",
+      fontSize: 2,
       color: "secondary",
     },
     a: {
@@ -101,8 +101,22 @@ const theme = {
       fontFamily: "monospace",
     },
     p: {
-      fontSize: "1.5em",
-      lineHeight: "1.6em",
+      fontSize: 4,
+    },
+    li: {
+      fontSize: 4,
+    },
+    small: {
+      fontSize: 0,
+    },
+    blockquote: {
+      fontSize: 4,
+      backgroundColor: "#eee",
+      padding: "0.6em .6em",
+      borderLeft: "5px solid #ff6347",
+      marginLeft: "0em",
+      paddingLeft: "2em",
+      color: "primary",
     },
   },
 }

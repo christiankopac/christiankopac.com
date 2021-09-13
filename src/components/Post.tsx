@@ -7,19 +7,21 @@ import Layout from "../components/Layout"
 import PropTypes from "prop-types"
 const shortcodes = { Link }
 import { useTransition, animated } from "react-spring"
+import { Heading } from "theme-ui"
 
-const PostTemplate = ({ data: { mdx } }) => {
-  return (
-    <Layout>
-      <article role="main">
-        <h1>{mdx.frontmatter.title}</h1>
-        <MDXProvider components={shortcodes}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-      </article>
-    </Layout>
-  )
-}
+const PostTemplate = ({ data: { mdx } }) => (
+  <Layout>
+    <article role="main">
+      <Heading as="h1" sx={{ color: "primary", fontSize: 6 }}>
+        {mdx.frontmatter.title}
+      </Heading>
+      <MDXProvider components={shortcodes}>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </MDXProvider>
+      <footer>Published on {mdx.frontmatter.date}</footer>
+    </article>
+  </Layout>
+)
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
@@ -28,6 +30,7 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        date
       }
     }
   }
