@@ -1,118 +1,91 @@
 module.exports = {
   siteMetadata: {
-    title: 'CK - Web development and beyond',
-    siteUrl: `https://www.christiankopac.com`,
+    title: `Christian Kopač - Code & Music`,
+    description: `My personal writings on code, music and more. JavaScript and TypeScript.`,
+    author: `@christiankopac`,
   },
   plugins: [
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-styled-jsx`,
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: `src/images/ck-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-react-svg`,
-      options: {
-        rule: {
-          include: /assets/,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-56334552-8`,
-        head: true,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: ['Work Sans:latin-ext', 'Merriweather:latin-ext']
-        }
-      }
-    },
-    `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-emojis`,
-            options: {
-              active: true,
-              class: `emoji-icon`,
-              // Select the size (available size: 16, 24, 32, 64)
-              size: 64,
-              styles: {
-                display: 'inline',
-                margin: '0',
-                'margin-top': '1px',
-                position: 'relative',
-                top: '5px',
-                width: '25px',
-              },
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              backgroundColor: "transparent"
-            }
-          },
-          "gatsby-plugin-sharp",
-          "gatsby-remark-copy-linked-files",
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
-          }
-        ],
-      }
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/about/cv`],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
+        name: `blog`,
+        path: `${__dirname}/content/blog/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'markdown',
-        path: `${__dirname}/src/content/`,
+        name: `music`,
+        path: `${__dirname}/content/music/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
+    // {
+    //   resolve: `gatsby-transformer-mdx-content-pages`,
+    //   options: {
+    //     sourceInstanceName: `blog`,
+    //     defaultTemplate: `post`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve(`./src/components/Layout.tsx`),
+        },
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    `gatsby-plugin-theme-ui`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#F56542`,
+        display: `minimal-ui`,
+        icon: `src/images/ck-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

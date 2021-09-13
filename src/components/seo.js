@@ -1,139 +1,89 @@
-import path from 'path'
-import React from 'react'
-import Helmet from 'react-helmet'
-import PropTypes from 'prop-types'
-// import config from '../config'
+/**
+ * SEO component that queries for data with
+ *  Gatsby's useStaticQuery React hook
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
 
-// const getSchemaOrgJSONLD = ({
-//   isBlogPost,
-//   url,
-//   title,
-//   image,
-//   description,
-//   datePublished,
-// }) => {
-//   const schemaOrgJSONLD = [
-//     {
-//       '@context': 'http://schema.org',
-//       '@type': 'WebSite',
-//       url,
-//       name: title,
-//       alternateName: config.title,
-//     },
-//   ];
+import React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
-//   return isBlogPost
-//     ? [
-//         ...schemaOrgJSONLD,
-//         {
-//           '@context': 'http://schema.org',
-//           '@type': 'BreadcrumbList',
-//           itemListElement: [
-//             {
-//               '@type': 'ListItem',
-//               position: 1,
-//               item: {
-//                 '@id': url,
-//                 name: title,
-//                 image,
-//               },
-//             },
-//           ],
-//         },
-//         {
-//           '@context': 'http://schema.org',
-//           '@type': 'BlogPosting',
-//           url,
-//           name: title,
-//           alternateName: config.title,
-//           headline: title,
-//           image: {
-//             '@type': 'ImageObject',
-//             url: image,
-//           },
-//           description,
-//           author: {
-//             '@type': 'Person',
-//             name: 'Jason Lengstorf',
-//           },
-//           publisher: {
-//             '@type': 'Organization',
-//             url: 'https://lengstorf.com',
-//             logo: config.logo,
-//             name: 'Jason Lengstorf',
-//           },
-//           mainEntityOfPage: {
-//             '@type': 'WebSite',
-//             '@id': config.url,
-//           },
-//           datePublished,
-//         },
-//       ]
-//     : schemaOrgJSONLD;
-// };
+function SEO({ description, lang, meta, title }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  )
 
-// const SEO = ({ postData, postImage, isBlogPost }) => {
-//   const postMeta = postData.frontmatter || {};
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
 
-//   const title = postMeta.title || config.title;
-//   const description =
-//     postMeta.description || postData.excerpt || config.description;
-//   const image = `${config.url}${postImage}` || config.image;
-//   const url = postMeta.slug
-//     ? `${config.url}${path.sep}${postMeta.slug}`
-//     : config.url;
-//   const datePublished = isBlogPost ? postMeta.datePublished : false;
+  return (
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(meta)}
+    />
+  )
+}
 
-//   const schemaOrgJSONLD = getSchemaOrgJSONLD({
-//     isBlogPost,
-//     url,
-//     title,
-//     image,
-//     description,
-//     datePublished,
-//   });
+SEO.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+}
 
-//   return (
-//     <Helmet>
-//       {/* General tags */}
-//       <meta name="description" content={description} />
-//       <meta name="image" content={image} />
+SEO.propTypes = {
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+}
 
-//       {/* Schema.org tags */}
-//       <script type="application/ld+json">
-//         {JSON.stringify(schemaOrgJSONLD)}
-//       </script>
-
-//       {/* OpenGraph tags */}
-//       <meta property="og:url" content={url} />
-//       {isBlogPost ? <meta property="og:type" content="article" /> : null}
-//       <meta property="og:title" content={title} />
-//       <meta property="og:description" content={description} />
-//       <meta property="og:image" content={image} />
-//       <meta property="fb:app_id" content={config.fbAppID} />
-
-//       {/* Twitter Card tags */}
-//       <meta name="twitter:card" content="summary_large_image" />
-//       <meta name="twitter:creator" content={config.twitter} />
-//       <meta name="twitter:title" content={title} />
-//       <meta name="twitter:description" content={description} />
-//       <meta name="twitter:image" content={image} />
-//     </Helmet>
-//   );
-// };
-
-// SEO.propTypes = {
-//   isBlogPost: PropTypes.bool,
-//   postData: PropTypes.shape({
-//     frontmatter: PropTypes.any,
-//     excerpt: PropTypes.any,
-//   }).isRequired,
-//   postImage: PropTypes.string,
-// };
-
-// SEO.defaultProps = {
-//   isBlogPost: false,
-//   postImage: null,
-// };
-
-// export default SEO
+export default SEO

@@ -1,0 +1,19 @@
+.normal {
+  cursor: pointer;
+  height: 20px;
+  width: 100%;
+}
+
+.fullscreen {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  background-color: black;
+  z-index: 100;
+}

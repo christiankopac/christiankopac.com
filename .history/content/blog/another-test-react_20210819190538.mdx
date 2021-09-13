@@ -1,0 +1,98 @@
+---
+title: "VueJS: Notes taken from the official guide"
+tags: ["vue", "spa", "ssr", "javascript"]
+excerpt: "My point of _Vue_ on Vue."
+slug: "vuejs"
+date: "2021.08.19"
+category: "blog"
+---
+
+## Essentials
+
+### What is VueJS
+
+> Vue is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.
+
+### Installation
+
+1. Import it as a CDN package on the page
+1. Download the JavaScript files and host them yourself
+1. Install it using npm
+1. Use the official CLI to scaffold a project, which provides batteries-included build setups for a modern frontend workflow (e.g., hot-reload, lint-on-save, and much more)
+
+### Development
+
+- Vue Devtools browser extension
+
+### Scaffolding
+
+- Vue CLI
+- Vite
+
+### Explanation of different builds
+
+**:black_heart: Muy importante!**
+
+- <https://v3.vuejs.org/guide/installation.html#explanation-of-different-builds>
+
+### Runtime + Compiler vs Runtime-only
+
+**:black_heart: Muy importante!**
+
+<https://v3.vuejs.org/guide/installation.html#runtime-compiler-vs-runtime-only>
+
+### Bundlers
+
+- Parcel <!-- TODO: Write parcel article -->
+- Rollup <!-- TODO: Write rollup article -->
+- Webpack <!-- TODO: Write webpack article -->
+
+### Some Vue alternatives:
+
+- React <!-- TODO: Write React article ->
+- Preact <!-- TODO: Write Preact article-->
+- Svelte <!-- TODO Write Svelte article -->
+- AngularJS
+- Inferno
+- ...
+
+## Introduction
+
+- Declarative Rendering
+
+  - v-\* represent Vue directives
+  - v-bind (_directive_)
+
+  ```html
+  <div id="bind-attribute">
+    <span v-bind:title="message">
+      Hover your mouse over me for a few seconds to see my dynamically bound
+      title!
+    </span>
+  </div>
+  ```
+
+  ```js
+  const AttributeBinding = {
+    data() {
+      return {
+        message: "You loaded this page on " + new Date().toLocaleString(),
+      }
+    },
+  }
+
+  Vue.createApp(AttributeBinding).mount("#bind-attribute")
+  ```
+
+- Handling User Input
+  - v-on **directive**
+
+## Components In-depth
+
+## Advanced Guides
+
+## Tooling
+
+## Scaling Up
+
+## Accessibility
