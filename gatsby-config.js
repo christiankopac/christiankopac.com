@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    image: "src/images/profile.jpg",
+    image: "profile.jpg",
     description: `My personal writings on code, music and more.`,
     title: `Christian Kopač - Code, music and more.`,
     url: "https://www.christiankopac.com",
