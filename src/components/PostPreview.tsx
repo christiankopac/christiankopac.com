@@ -62,27 +62,43 @@ const PostPreview = props => {
               },
             }}
           >
-            {props.post.frontmatter.tags.map(tag => (
-              <Box
-                style={{
-                  textDecoration: "none",
-                  textTransform: "uppercase",
-                  fontFamily: "Source Code Pro",
-                  color: "secondary",
-                }}
-                sx={{
-                  marginTop: "2",
-                  fontSize: 1,
-                  "@media screen and (max-width: 40em)": {
-                    padding: 0,
-                    margin: 0,
-                    fontSize: 0,
-                  },
-                }}
-              >
-                🔸 {tag}&nbsp;
-              </Box>
-            ))}
+            {props.post.frontmatter.tags.map(
+              (
+                tag:
+                  | string
+                  | number
+                  | boolean
+                  | {}
+                  | React.ReactElement<
+                      any,
+                      string | React.JSXElementConstructor<any>
+                    >
+                  | React.ReactNodeArray
+                  | React.ReactPortal
+                  | null
+                  | undefined
+              ) => (
+                <Box
+                  style={{
+                    textDecoration: "none",
+                    textTransform: "uppercase",
+                    fontFamily: "Source Code Pro",
+                    color: "secondary",
+                  }}
+                  sx={{
+                    marginTop: "2",
+                    fontSize: 1,
+                    "@media screen and (max-width: 40em)": {
+                      padding: 0,
+                      margin: 0,
+                      fontSize: 0,
+                    },
+                  }}
+                >
+                  🔸 {tag}&nbsp;
+                </Box>
+              )
+            )}
           </Box>
         </Box>
       </Link>
