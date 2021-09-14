@@ -75,10 +75,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Christian Kopac's personal website`,
+        short_name: `CK`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#1b1b1b`,
         theme_color: `#F56542`,
         display: `minimal-ui`,
         icon: `src/images/ck-icon.png`, // This path is relative to the root of the site.
