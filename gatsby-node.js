@@ -1,7 +1,31 @@
 const path = require("path")
 const _ = require("lodash")
-const { createFilePath } = require("gatsby-source-filesystem")
+const {
+  createFilePath,
+  createSchemaCustomization,
+  onCreateNode,
+  createRemoteFileNode,
+} = require("gatsby-source-filesystem")
 
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions
+  createTypes(`
+   type Mdx implements Node {
+     frontmatter: Frontmatter
+   }
+   type Frontmatter @dontInfer {
+     date: Date @dateformat,
+     slug: String
+     title: String,
+     tags: [String],
+     category: String,
+     status: String,
+     excerpt: String,
+     embeddedImagesRemote: [File] @link(by:"url"),
+     embeddedImagesLocal: [File] @fileByRelativePath
+   }
+ `)
+}
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve("src/components/Post.tsx")
@@ -51,4 +75,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   })
+}
+
+exports.onCreateNode = ({
+  node,
+  createNodeId,
+  actions: { createNode },
+  cache,
+  store,
+}) => {
+  if (
+    node.internal.type === "Mdx" &&
+    node.frontmatter &&
+    node.frontmatter.embeddedImagesRemote
+  ) {
+    return Promise.all(
+      node.frontmatter.embeddedImagesRemote.map(url => {
+        try {
+          return createRemoteFileNode({
+            url,
+            parentNodeId: node.id,
+            createNode,
+            createNodeId,
+            cache,
+            store,
+          })
+        } catch (error) {
+          console.error(error)
+        }
+      })
+    )
+  }
 }
