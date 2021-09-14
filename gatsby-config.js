@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    image: "/images/profile.jpg",
+    image: "src/images/profile.jpg",
     description: `My personal writings on code, music and more.`,
     title: `Christian Kopač - Code, music and more.`,
     url: "https://www.christiankopac.com",
     author: `Christian Kopač`,
     twitterUsername: "@teatang",
-    titleTemplate: "%s · Christian Kopač · Code, music and more",
+    titleTemplate: "%s · Christian Kopač",
   },
   plugins: [
     {
