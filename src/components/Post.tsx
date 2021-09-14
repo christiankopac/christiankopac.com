@@ -8,9 +8,11 @@ import PropTypes from "prop-types"
 const shortcodes = { Link }
 import { useTransition, animated } from "react-spring"
 import { Heading } from "theme-ui"
+import SEO from "./seo"
 
 const PostTemplate = ({ data: { mdx } }) => (
   <Layout>
+    <SEO title={mdx.frontmatter.title} />
     <article role="main">
       <Heading as="h1" sx={{ color: "primary", fontSize: 6 }}>
         {mdx.frontmatter.title}
