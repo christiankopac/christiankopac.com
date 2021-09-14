@@ -16,10 +16,17 @@ const PostTemplate = ({ data: { mdx } }) => (
         {mdx.frontmatter.title}
       </Heading>
       <MDXProvider components={shortcodes}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
+        <MDXRenderer
+          remoteImages={mdx.frontmatter.embeddedImagesRemote}
+          localImages={mdx.frontmatter.embeddedImagesLocal}
+        >
+          {mdx.body}
+        </MDXRenderer>
       </MDXProvider>
-      <footer>Published on {mdx.frontmatter.date}</footer>
     </article>
+    <footer style={{ marginTop: "3em" }}>
+      Published on {mdx.frontmatter.date}
+    </footer>
   </Layout>
 )
 
@@ -31,6 +38,24 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
+        embeddedImagesLocal {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              width: 600
+            )
+          }
+        }
+        embeddedImagesRemote {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              width: 600
+            )
+          }
+        }
       }
     }
   }
