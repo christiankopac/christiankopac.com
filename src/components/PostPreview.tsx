@@ -80,7 +80,7 @@ const PostPreview = props => {
                   },
                 }}
               >
-                #{tag}
+                🔸 {tag}&nbsp;
               </Box>
             ))}
           </Box>
