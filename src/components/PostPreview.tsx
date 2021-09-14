@@ -28,26 +28,24 @@ const PostPreview = props => {
             position: "relative",
             border: "1px solid rgba(59,59,59,0.3)",
             borderRadius: "5px",
-            margin: "20px 0",
-            padding: "0 1em 2em 2em",
           }}
           sx={{
-            "&::before": {
-              content: '" "',
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              position: "absolute",
-              backgroundSize: "cover",
-
-              "&:hover": {
-                filter: "blur(5px)",
-              },
+            margin: "20px 0",
+            padding: "0 1em 2em 2em",
+            "@media screen and (max-width: 40em)": {
+              padding: "10px 10px ",
             },
           }}
         >
-          <h2 style={{ marginBottom: "10px" }}>
+          <h2
+            style={{ marginBottom: "10px" }}
+            sx={{
+              "@media screen and (max-width: 40em)": {
+                marginTop: "0",
+                fontSize: "1",
+              },
+            }}
+          >
             {props.post.frontmatter.title}
           </h2>
           <Text>{props.post.frontmatter.excerpt}</Text>
@@ -55,20 +53,31 @@ const PostPreview = props => {
           <Box
             style={{
               display: "flex",
+            }}
+            sx={{
               flexDirection: "row",
+              "@media screen and (max-width: 40em)": {
+                fontSize: "2",
+                flexDirection: "column",
+              },
             }}
           >
             {props.post.frontmatter.tags.map(tag => (
               <Box
                 style={{
                   textDecoration: "none",
-                  flexDirection: "row",
-                  fontSize: "1em",
                   textTransform: "uppercase",
                   fontFamily: "Source Code Pro",
-                  padding: "7px 3px 0 0",
-                  margin: "0 3px",
                   color: "secondary",
+                }}
+                sx={{
+                  marginTop: "2",
+                  fontSize: 1,
+                  "@media screen and (max-width: 40em)": {
+                    padding: 0,
+                    margin: 0,
+                    fontSize: 0,
+                  },
                 }}
               >
                 #{tag}
