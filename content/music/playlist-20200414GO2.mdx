@@ -5,9 +5,11 @@ date: "2020-04-14"
 slug: "radio-student-playlist-2020-04-14"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-04-14-seznam-skladb-za-14-4-2020-1100%E2%80%931500-christian-kopa%C4%8D-112226.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-04-14-seznam-skladb-za-14-4-2020-1100%E2%80%931500-christian-kopa%C4%8D-112226.jpg?itok=hPro0YH5)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Слом - Луцидни сан (Кривине ума ЕП, 2019) [LIBRARION]
 2. Emanative - Sandhyavandanam (Earth, 2018) [Jazzman]
@@ -55,3 +57,19 @@ status: "published"
 44. II/III - Bad blood (It Could Be Paradise, 2020) [AmbientSoup]
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-14-4-2020-1100%E2%80%931500-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

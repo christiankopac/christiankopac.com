@@ -5,9 +5,11 @@ date: "2019-04-17"
 slug: "radio-student-playlist-2019-04-17"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2019-04-17-seznam-skladb-za-17-4-2019-1500%E2%80%931900-christian-kopa%C4%8D-99223.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2019-04-17-seznam-skladb-za-17-4-2019-1500%E2%80%931900-christian-kopa%C4%8D-99223.jpg?itok=t7bbxstv)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1 - Mort Garson - Music to Soothe the Savage Snake Plant
 2 - ⣎⡇ꉺლ༽இ•̛)ྀ◞ ༎ຶ ༽ৣৢ؞ৢ؞ؖ ꉺლ - °。 _̧.·_ ́ ̈・_・ . °。· ́ ̈ ́ ゚_ ́ ̈・ 。・ ゚. ́ ̈ ゚. .· ・_.。_ ̈°. ・_。 ̧.·_ ́.·_̈.· ・ ゚. 。_ ́ ̈*́ ̈ .·.·* ́ ̈.·_:・✧(๑ඕัළඕั๑)✧_:・s░ƪ.
@@ -55,3 +57,19 @@ status: "published"
 44 - Kreggo + Textasy - The Definitive Hardcore Anthem
 
 <https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-17-4-2019-1500%E2%80%931900-christian-kopa%C4%8D>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

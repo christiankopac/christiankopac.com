@@ -5,11 +5,13 @@ date: "2014-06-19"
 slug: "concert-review-stiropor-day-1"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-06-19-stiropor-jessy-lanza-las-kellis-visionist-kalu-the-crystallines-et-al-28634.jpg
 ---
 
-**Urban Roof & KCŠ, 18. 6. 2014**
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-06-19-stiropor-jessy-lanza-las-kellis-visionist-kalu-the-crystallines-et-al-28634.jpg?itok=KWPD5mMf)
+**Urban Roof & KCŠ, 18. 6. 2014**
 
 Redkokdaj je recenzentu dana v dlan tako priročna metafora, kot se je to zgodilo v sredo, 18. junija, ko sta se odvijala dva dogodka na dveh različnih lokacijah v Šiški v okviru festivala Stiropor. Torej: vsebine so iz tujine prišle v enem kosu in so ustrezale slikam v online katalogu, medtem ko je embalaža - Stiropor - pustil malce mlačen vtis.
 
@@ -41,4 +43,20 @@ Pač, dobili smo ponovno potrditev, da se substance in njim namenjena glasba vra
 
 V sklep: navdušenje nad dobrim izborom izvajalcev in rahlo razočaranje nad organizacijo dogodka, predvsem zaradi težav z zvokom in tišino med nastopi. Glede na ceno kart lahko rečemo, da upamo in računamo, da bodo tovrstne probleme odpravili pri nadaljnjih dogodkih.
 
-https://radiostudent.si/glasba/r%C5%A1-recenzija/stiropor-jessy-lanza-las-kellis-visionist-kalu-the-crystallines-et-al
+<https://radiostudent.si/glasba/r%C5%A1-recenzija/stiropor-jessy-lanza-las-kellis-visionist-kalu-the-crystallines-et-al>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

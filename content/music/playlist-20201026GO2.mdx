@@ -5,9 +5,11 @@ date: "2020-10-26"
 slug: "radio-student-playlist-2020-10-26"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-10-26-seznam-skladb-za-26-10-2020-1100%E2%80%931500-christian-kopa%C4%8D-118417.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-10-26-seznam-skladb-za-26-10-2020-1100%E2%80%931500-christian-kopa%C4%8D-118417.jpg?itok=jOOZKThM)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Samuel Blues & Miha Erič - Termostat? (2020)
 2. Karlo Lugarić - GuskeSedam godišnjih doba (2020) [Samozaložba]
@@ -61,3 +63,19 @@ status: "published"
 50. Skova - Rap Michelangelo? (2020)
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-26-10-2020-1100%E2%80%931500-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

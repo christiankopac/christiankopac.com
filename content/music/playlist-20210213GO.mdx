@@ -5,9 +5,11 @@ date: "2021-02-13"
 slug: "radio-student-2021-02-13"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-02-13-seznam-skladb-za-13-2-2021-1400%E2%80%931800-christian-kopa%C4%8D-122642.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-02-13-seznam-skladb-za-13-2-2021-1400%E2%80%931800-christian-kopa%C4%8D-122642.jpg?itok=JuHlcAm-)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. OCA - Stretching In Water
 2. Nejc Pipp - To Speak or to Die
@@ -70,3 +72,19 @@ status: "published"
 59. MRFY - Zonzei (Feat. Matter) (2020)
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-13-2-2021-1400%E2%80%931800-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,18 +5,36 @@ date: "2015-03-07"
 slug: "album-review-evano-exploration-marx"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-03-07-evano-exploration-marx-38913.jpg
 ---
 
-**Archipel, 2013**
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-03-07-evano-exploration-marx-38913.jpg?itok=dc-hyiD_)
+**Archipel, 2013**
 
 Minimalizem in microhouse v prvi dolgometražni izdaji mladega domačega producenta, ki raziskuje globine zvoka z eksperimentalnim pristopom in terenskimi posnetki.
 
 **Evanota** pa lahko v živo ujamete 19. marca, ko bo na prvem dnevu festivala Tresk zarolal kvaliteten izbor minimalnega techna in microhousa - tudi komad Vimana, ki bo izšel na sveži underground vinilni kompilaciji **"Ctrl N: Poglavje slovenske elektronike"**. Kompilaciji lahko prisluhnete na **[Soundcloudu](https://soundcloud.com/zarsrecords/sets/ctrl-n-poglavje-slovenske-elektronike-preview-snippets)**, prednaročila pa se nahajajo na **[Bandcampu](https://zars.bandcamp.com/album/ctrl-n-poglavje-slovenske-elektronike)**!
 
-**[Soundcloud](https://soundcloud.com/evano)**
+**[Evano @SoundCloud](https://soundcloud.com/evano)**
 
-**[Facebook](https://www.facebook.com/e.rpsky)**
+**[Evano @Facebook](https://www.facebook.com/e.rpsky)**
 
 <https://www.radiostudent.si/glasba/raz%C5%A1irjamo-obzorja/evano-exploration-marx>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,9 +5,11 @@ date: "2015-02-07"
 slug: "radio-student-playlist-2015-02-07"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-02-07-glasbene-opreme-seznam-skladb-za-7.2.2015-11.00-18.00-christian-kopa%C4%8D-37791.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-02-07-glasbene-opreme-seznam-skladb-za-7.2.2015-11.00-18.00-christian-kopa%C4%8D-37791.jpg?itok=IlN5JRUB)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Kalahari Surfers - Europeans - 00:00
 2. Ondness - Hobo Pwe - 04:27
@@ -73,3 +75,19 @@ status: "published"
 <https://radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-7-2-2015-1100-1800-christian-kopa%C4%8D>
 
 ![](https://i.imgur.com/b8h6IuL.gif)
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

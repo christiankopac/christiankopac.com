@@ -5,9 +5,11 @@ date: "2019-10-03"
 slug: "radio-student-playlist-2019-10-03"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2019-10-03-seznam-skladb-za-4-9-2019-1500%E2%80%931900-christian-kopa%C4%8D-104581.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2019-10-03-seznam-skladb-za-4-9-2019-1500%E2%80%931900-christian-kopa%C4%8D-104581.jpg?itok=lm3Koyg5)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1 - Resavoir - Intro (Resavoir, 2019)
 2 - Elsa Waut - Red Soldier (Elsa Waut, 2019)
@@ -58,3 +60,19 @@ status: "published"
 47 - Galcher Lustwerk - Cig Angel (Cig Angel, 2019)
 
 <https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-4-9-2019-1500%E2%80%931900-christian-kopa%C4%8D>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

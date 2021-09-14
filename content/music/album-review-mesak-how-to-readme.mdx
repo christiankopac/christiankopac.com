@@ -5,13 +5,15 @@ date: "2015-01-09"
 slug: "album-review-mesak-how-to-readme"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-01-09-tolpa-bumov-mesak-howto-readme-36467.jpg
 ---
+
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 # Mesak - How to readme
 
 **Harmönia / Ausland Schläge, 2014**
-
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-01-09-tolpa-bumov-mesak-howto-readme-36467.jpg?itok=07ixZK6s)
 
 Skweee je glasbeni žanr, ki ima svoje začetke na Švedskem in Finskem. Je kombinacija enostavnih chiptune in sintetizatorskih bas linij, ki so mešane s funkom, R&B-jem in soul melodijami. Rezultat te kombinacije so gladke funky melodije, ki so večinoma instrumentalne, čeprav – kot povsod drugod - obstajajo tudi izjeme. Daniel Savio, švedski elektronski producent in DJ, je bil prvi, ki je skandinavski žanr poimenoval skweee. S tem imenom se nanaša na uporabo starih sintetizatorjev, iz katerih se v produkcijskem studiu skuša iztisniti ali »skweeezati« čim zanimivejše zvoke. Čeprav najdemo začetke žanra nekje v letu 2006, se je v zadnjih dveh letih ta hitro razširil z domačih skandinavskih tal v pravo malo globalno sceno. Danes najdemo založbe in producente, ki ustvarjajo skweee glasbo, po celem svetu. S kratkim uvodom v ta glasbeni žanr danes predstavljamo Howto Readme, drugi album elektronskega finskega producenta Mesaka.
 
@@ -30,3 +32,19 @@ Synth pop, electro, chiptune, malo IDM-a, funka, soula, rhythm & bluesa in nekaj
 Še ena zanimivost o skweee žanru. V večini se izdaja v formatu sedeminčnih vinilov. Prvi posnetki so bili samo v tej obliki, kasneje so se pojavili še v obliki 12-inčnih vinilov in seveda v formatu kasete, ki je danes zopet precej pogosta. Druženje analognih zvokov in magnetnih trakov v obliki kasete je kombinacija, ki se bo tudi letos pojavljala in širila na polju alternativnih žanrov. Kot končni napotek pa še tole. Za poglobitev v skweee žanr priporočamo blog Skweelicious, kjer najdete med vsebino tudi naraščajoči seznam glasbenikov tega zanimivega žanra, jasno pa je – kot je zapisal angleški novinar, Derek Walmsley - da veš, da gre za skweee tedaj, ko začutiš, da gre za skweee.
 
 [mesak.net](http://mesak.net/)
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

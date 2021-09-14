@@ -5,9 +5,11 @@ date: "2021-09-01"
 slug: "radio-student-playlist-2021-09-01"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-09-01-seznam-skladb-za-1-9-2021-1100-1500-christian-kopac-129073.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-09-01-seznam-skladb-za-1-9-2021-1100-1500-christian-kopac-129073.jpg)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Pantaloons - L'Amore Sulle Nuvole
 2. Eilien - Blue Skies
@@ -68,4 +70,20 @@ status: "published"
 57. Stella Research Committee - River Rd
 58. Ljupa Angelov - Drugar
 
-https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-1-9-2021-1100-1500-christian-kopac
+<https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-1-9-2021-1100-1500-christian-kopac>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,9 +5,11 @@ date: "2015-10-23"
 slug: "radio-student-playlist-2015-10-23"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-10-23-seznam-skladb-za-23.10.2015-15.00-19.00-christian-kopa%C4%8D-47584.png
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-10-23-seznam-skladb-za-23.10.2015-15.00-19.00-christian-kopa%C4%8D-47584.png?itok=3nyeF_Es)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Okokon - Wrake [Turkson Side, Other People]
 2. Owiny Sigoma Band - Nyanza Night [Nyanza, Brownswood Recordings]
@@ -42,3 +44,19 @@ status: "published"
 31. Clap! Clap! - (S) Serendipity [Simple, Black Acre]
 
 ![](https://i.imgur.com/bQCcJQ6.gif)
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

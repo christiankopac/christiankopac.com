@@ -5,11 +5,13 @@ date: ""
 slug: "album-review-dustin-wong-and-takako-minekawa-savage-imagination"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-10-28-tolpa-bumov-dustin-wong-takako-minekawa-savage-imagination-33390.jpg
 ---
 
-**Thrill Jockey, 2014**
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-10-28-tolpa-bumov-dustin-wong-takako-minekawa-savage-imagination-33390.jpg?itok=C8NXrXvP)
+**Thrill Jockey, 2014**
 
 Dustin Wong in Takako Minekawa nam predstavljata svoj drugi album z imenom »Savage Imagination«: na kratko rečeno gre za eksperimentalni pop pod vplivom japonskega popa in surf rocka.
 
@@ -27,4 +29,20 @@ Kombinacija zvokov, še posebej močno reverbanih kitarskih loopov v kombinaciji
 
 [@takakominekawa](https://twitter.com/tm_meandcat)
 
-https://radiostudent.si/glasba/tolpa-bumov/dustin-wong-takako-minekawa-savage-imagination
+<https://radiostudent.si/glasba/tolpa-bumov/dustin-wong-takako-minekawa-savage-imagination>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

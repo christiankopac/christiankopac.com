@@ -5,9 +5,11 @@ date: "2020-10-03"
 slug: "radio-student-playlist-2020-10-03"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-10-03-seznam-skladb-za-3-10-2020-1200%E2%80%931800-christian-kopa%C4%8D-117573.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-10-03-seznam-skladb-za-3-10-2020-1200%E2%80%931800-christian-kopa%C4%8D-117573.jpg?itok=Gm3BAut9)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Lina_Raül Refree - Voz Amália De NósLina_Raül Refree (Glitterbeat ,2020)
 2. Thiago Nassif - Feral FoxMente (Gearbox ,2020)
@@ -70,3 +72,19 @@ status: "published"
 59. Japanski Premijeri - PerhappinessJP=10 Vol.1: The Best Of 2010 – 2020 (Samozaložba ,2020)
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-3-10-2020-1200%E2%80%931800-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

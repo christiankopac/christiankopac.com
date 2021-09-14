@@ -5,9 +5,11 @@ date: "2021-07-19"
 slug: "radio-student-2021-07-19"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-07-19-seznam-skladb-za-19-7-2021-1100-1500-christian-kopac-128158.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-07-19-seznam-skladb-za-19-7-2021-1100-1500-christian-kopac-128158.jpg?itok=Si7B8_KM)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Zergon - Magic Crystal Ball
 2. Tindersticks - A Man Needs A Maid
@@ -76,3 +78,19 @@ status: "published"
 65. Gori Ussi Winnetou - Predizborna
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-19-7-2021-1100-1500-christian-kopac
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

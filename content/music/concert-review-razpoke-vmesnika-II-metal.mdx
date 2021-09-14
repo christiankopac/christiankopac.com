@@ -5,11 +5,13 @@ date: "2014-09-18"
 slug: "concert-review-razpoke-vmesnika-ii-metal"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-09-18-razpoke-vmesnika-ii-metal-31731.jpg
 ---
 
-**Slovenska Kinoteka, 17. 9. 2014**
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-![](https://radiostudent.si/glasba/r%C5%A1-recenzija/razpoke-vmesnika-ii-metal)
+**Slovenska Kinoteka, 17. 9. 2014**
 
 Z včerajšnjo predstavo Luke Prinčiča v sodelovanju z zavodom Emanat v Slovenski Kinoteki smo pod naslovom »Razpoke vmesnika II: Metal« znova slišali in tokrat tudi videli, da je slovenska eksperimentalna elektronika na zelo dobrem nivoju.
 
@@ -23,4 +25,20 @@ V zvočnem smislu je Luka Prinčič včeraj z različnimi zvoki predstavljal mej
 
 Čeprav je kinodvorana pravi prostor za avdiovizualno potovanje, bi si v tem kontekstu želeli videti včerajšnjo predstavo v kakšni zapuščeni tovarni, kjer bi se koncept združenja človeka in tehnologije bolje ujemal s samo lokacijo. Čeprav predstava v svojem naslovu nosi ime »Metal«, so vizualne kompozicije nepovezane s samim materialom – bolj na to asociira zvočna plat predstave, ki nas je večkrat opomnila na grobo kovinsko industrijo. Predstava, ki je trajala slabo uro, je bila res kvalitetna, in po njej definitivno lahko rečemo, da je njen avtor, Luka Prinčič, ne samo glasbenik in umetnik, ampak tudi raziskovalec avdiovizualnih kompozicij.
 
-https://radiostudent.si/glasba/r%C5%A1-recenzija/razpoke-vmesnika-ii-metal
+<https://radiostudent.si/glasba/r%C5%A1-recenzija/razpoke-vmesnika-ii-metal>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

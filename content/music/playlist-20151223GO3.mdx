@@ -5,9 +5,11 @@ date: "2015-12-23"
 slug: "radio-student-playlist-2015-12-23"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-12-23-seznam-skladb-za-23.12.2015-15.00-19.00-christian-kopa%C4%8D-50210.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-12-23-seznam-skladb-za-23.12.2015-15.00-19.00-christian-kopa%C4%8D-50210.jpg?itok=qRqjZPaY)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Floating Points − Nespole
 2. Chaos In The CBD − Trust Is Key
@@ -59,3 +61,19 @@ status: "published"
 48. Owiny Sigoma Band − Tech 9
 
 <https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-23-12-2015-1500-1900-christian-kopa%C4%8D>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

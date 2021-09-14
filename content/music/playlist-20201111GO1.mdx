@@ -5,9 +5,11 @@ date: "2020-11-11"
 slug: "radio-student-playlist-2020-11-11"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-11-11-seznam-skladb-za-11-11-2020-700%E2%80%931100-christian-kopa%C4%8D-119070.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-11-11-seznam-skladb-za-11-11-2020-700%E2%80%931100-christian-kopa%C4%8D-119070.jpg?itok=EgluU32m)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Dino Spiluttini - Prelude (To Be a Beast, 2017)
 2. Lucrecia Dalt - Seca (No era sólida, 2020)
@@ -46,3 +48,19 @@ status: "published"
 35. The Stroj - Skin scream
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-11-11-2020-700%E2%80%931100-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

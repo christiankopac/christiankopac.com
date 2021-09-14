@@ -5,9 +5,11 @@ date: "2021-01-22"
 slug: "radio-student-2021-01-22"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-01-22-seznam-skladb-za-22-1-2021-1100%E2%80%931500-christian-kopa%C4%8D-121794.jpeg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-01-22-seznam-skladb-za-22-1-2021-1100%E2%80%931500-christian-kopa%C4%8D-121794.jpeg?itok=3Un472g9)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Lagoss - La Chipina
 2. Vuki Vuk - Pa Se Zamislm
@@ -53,3 +55,19 @@ status: "published"
 42. Suzi Soprano - Kadaver
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-22-1-2021-1100%E2%80%931500-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

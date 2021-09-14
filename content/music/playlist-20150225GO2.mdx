@@ -5,9 +5,11 @@ date: "2015-02-25"
 slug: "radio-student-playlist-2015-02-25"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-02-25-glasbene-opreme-seznam-skladb-za-25.2.2015-11.00-15.00-christian-kopa%C4%8D-38576.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-02-25-glasbene-opreme-seznam-skladb-za-25.2.2015-11.00-15.00-christian-kopa%C4%8D-38576.jpg?itok=rMuT1Caq)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Johann Sebastian Bach-Walter Carlos - Chorale Prelude Wachet Auf
 2. Ola Horhe - La Routine (Feat. Sanja Lončar)
@@ -65,3 +67,19 @@ status: "published"
 ![](https://i.imgur.com/pfAjttq.gif)
 
 <https://radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-25-2-2015-1100-1500-christian-kopa%C4%8D>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

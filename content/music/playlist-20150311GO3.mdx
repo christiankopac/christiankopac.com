@@ -5,9 +5,11 @@ date: "2015-03-11"
 slug: "radio-student-playlist-2015-03-11"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-03-11-glasbene-opreme-seznam-skladb-za-11.3.2015-15.00-19.00-christian-kopa%C4%8D-39154.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-03-11-glasbene-opreme-seznam-skladb-za-11.3.2015-15.00-19.00-christian-kopa%C4%8D-39154.jpg?itok=05vK6gv7)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Salonski - Letni časi (04:57) **@ TRESK #6 20. Marec, Kino Šiška**
 2. Belgradeyard Sound System - Two Teaspoons Of Sugar (04:23)
@@ -63,3 +65,19 @@ status: "published"
 <https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-11-3-2015-1500-1900-christian-kopa%C4%8D>
 
 ![](https://i.imgur.com/0LrUXRQ.gi⎄
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,9 +5,11 @@ date: "2020-02-26"
 slug: "radio-student-playlist-2020-02-26"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-02-26-seznam-skladb-za-26-2-2020-1100%E2%80%931500-christian-kopa%C4%8D-110044.JPG
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-02-26-seznam-skladb-za-26-2-2020-1100%E2%80%931500-christian-kopa%C4%8D-110044.JPG?itok=qS7mM9lT)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Andy Stott - Promises - It Should Be Us (2019) [Modern Love]
 2. Kleemar - Someone Who You Nod to... - Progress: The Trieste-Vladivostok Ex.04 Line (2004) [rx:tx]
@@ -68,3 +70,19 @@ status: "published"
 57. Youkounkoun - El Maldito - Girls and Guitars (1990) [JP Van’s Boom Records]
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-26-2-2020-1100%E2%80%931500-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

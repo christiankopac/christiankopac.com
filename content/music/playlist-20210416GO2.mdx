@@ -5,9 +5,11 @@ date: "2021-04-16"
 slug: "radio-student-2021-04-16"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-04-16-seznam-skladb-za-16-4-2021-1100%E2%80%931500-christian-kopa%C4%8D-125058.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-04-16-seznam-skladb-za-16-4-2021-1100%E2%80%931500-christian-kopa%C4%8D-125058.jpg?itok=VRUl1ciO)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Bill MacKay, Nathan Bowles - Dry Rations I
 2. Tassos Chalkias / Τάσος Χαλκιάς - Palia Itia (Old Willow Tree)
@@ -56,3 +58,19 @@ status: "published"
 45. Bjarki - Alone in SandkassiHappy Earthday
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-16-4-2021-1100%E2%80%931500-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

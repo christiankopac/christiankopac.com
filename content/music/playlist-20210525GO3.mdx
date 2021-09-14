@@ -5,9 +5,11 @@ date: "2021-05-25"
 slug: "radio-student-2021-05-25"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-05-25-seznam-skladb-za-25-5-2021-1500%E2%80%931900-christian-kopa%C4%8D-126504.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-05-25-seznam-skladb-za-25-5-2021-1500%E2%80%931900-christian-kopa%C4%8D-126504.jpg?itok=lIaCHwf2)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Trio Lumi - Tere Tere
 2. birds of unknown - To Find A Place
@@ -52,3 +54,19 @@ status: "published"
 41. CarlXJohnson - Ryder
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-25-5-2021-1500%E2%80%931900-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

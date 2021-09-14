@@ -5,9 +5,11 @@ date: "2018-12-03"
 slug: "radio-student-playlist-2018-12-03"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2018-12-03-SEZNAM-SKLADB-ZA-03-12-2018-1500-1900-CHRISTIAN-KOPA%C4%8C-93895.JPG
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2018-12-03-SEZNAM-SKLADB-ZA-03-12-2018-1500-1900-CHRISTIAN-KOPA%C4%8C-93895.JPG?itok=-Tdr94vU)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Oneohtrix Point Never - Love in the Time of Lexapro
 2. Afrikan Dreamland - Last Chance To Dance
@@ -74,3 +76,19 @@ status: "published"
 63. Vessel - Fantasma (For Jasmine
 
 <https://www.radiostudent.si/Ostalo/Glasbene-opreme/SEZNAM-SKLADB-ZA-03-12-2018-1500-1900-CHRISTIAN-KOPA%C4%8C>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

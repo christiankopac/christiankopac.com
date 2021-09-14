@@ -5,9 +5,11 @@ date: " 2014-10-31"
 slug: "dj-seansa-adam-marshall"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-10-31-adam-marshall-33521.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-10-31-adam-marshall-33521.jpg?itok=W-eHwwgW)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 V tokratni DJ Seansi se bo premierno predvajal miks, ki ga je kanadčan Adam Marshall posnel ekskluzivno za Radio Študent.
 
@@ -15,6 +17,24 @@ Adam Marshall je ustanovitelj in prvi mož založbe New Kanada, ki že skoraj de
 
 Enourni miks je poln techna, housa in bass zvokov,  z glavnim fokusom na vzdušju. Kanadčan že nekaj časa živi v Berlinu in nam z zelo natančnim miksom pokaže, da ni samo zelo kreativen producent in uspešen šef založbe, ampak tudi zelo dober za mešalko.
 
-[@random_pattern](https://twitter.com/random_pattern) . [NEW KANADA](http://newkanada.com/)
+[@random_pattern](https://twitter.com/random_pattern)
 
-https://radiostudent.si/glasba/dj-seansa/adam-marshall
+[NEW KANADA](http://newkanada.com/)
+
+<https://radiostudent.si/glasba/dj-seansa/adam-marshall>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

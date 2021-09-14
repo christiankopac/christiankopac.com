@@ -5,9 +5,11 @@ date: "2020-09-07"
 slug: "radio-student-playlist-2020-09-07"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-09-07-seznam-skladb-za-7-9-2020-1600%E2%80%931900-christian-kopa%C4%8D-116801.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-09-07-seznam-skladb-za-7-9-2020-1600%E2%80%931900-christian-kopa%C4%8D-116801.jpg?itok=EbJ9y7RE)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Julianna Barwick - Inspirit Inspirit ( ? , 2020)
 2. Lip Talk - Mind Games ? ( ? , 2020)
@@ -48,3 +50,19 @@ status: "published"
 37. kleemar - slow is too quick no love in modern world ( ? , 2020)
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-7-9-2020-1600%E2%80%931900-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,11 +5,13 @@ date: "2015-01-04"
 slug: "album-review-call-super-suzi-ecto"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-01-04-tolpa-bumov-call-super-suzi-ecto-36152.jpg
 ---
 
-**Houndstooth, 2014**
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-01-04-tolpa-bumov-call-super-suzi-ecto-36152.jpg?itok=GKquRuuP)
+**Houndstooth, 2014**
 
 Čeprav smo v letu 2014 slišali kar dosti elektronske glasbe in še posebej klubske elektronike, smo lahko zasledili tudi nekaj  trendovskih oziroma karakterističnih zvokov, ki se ponavljajo pri velikem številu house in tehno producentov. Med te trende lahko prištejemo vrnitev k analognemu zvoku in pojavljanje industrijskih in surovih glasbenih elementov. Obenem lahko občutimo še vedno prisotne posledice post-dubstepa, nekaj producentov pa se je obrnilo k bolj futurističnim in kompleksnejšim melodičnim vzorcem. Suzi Ecto je plata, ki se ne drži teh trendov, je tehno plata, ki lahko spreminja obliko glede na kontekst v katerem se predvaja, še posebej pa gre za zelo intimen in oseben pogled na svet Josepha Seatona.
 
@@ -24,3 +26,19 @@ Prvi komad na albumu z naslovom »Snipe« je kombinacija terenskih posnetkov in 
 Na plati definitivno najdemo tudi zelo klubske komade, kot sta »Dovetail« in »Hoax Eye«. Pri »Dovetail« se pozornost poslušalca menja med zelo čisto in popolno bass podlago in synthi, ki se v večjih plasteh razvijajo v ozadju, medtem ko ustvarjajo naraščajoč občutek tesnobe. »Hoax Eye« pa nas po drugi strani spominja na zelo tipičen večer londonske bass muzike, a v zelo surovem in počasnem stilu, polnem detajlov, ki, kakor tudi v drugih komadih s plate, pripomorejo k temu, da med poslušanjem začutimo določeno mero spremembe našega razpoloženja. Kot smo omenili na začetku, je Call Super s plato Suzi Ecto želel predstaviti paranojo modernega življenja, kot najboljša predstavnika tovrstnega namena pa sta komada »Fold Again At Last« in »Coney Sweat Land«, kjer Seaton z uporabo zelo visokih frekvenc ustvarja glasbeno tesnobo in pusti poslušalca v pričakovanju tega, kar si lahko le vsak sam predstavlja pod pojmom paranoje. Pri nekaterih komadih se ta konceptualna paranoja spreminja v ambientalne zvoke, medtem ko se drugje pojavijo v obliki zvoka klarineta in oboe, ki jih je snemal Seatonov oče.
 
 Suzi Ecto je po kompleksnosti komadov in zvokov res čudovita plata. Glasbeni koncepti barve in teksture se skozi celo plato pojavljajo na različne načine in s pomočjo harmonij, ki se pletejo in razvijajo na več plasteh, postavljajo poslušalca v skorajšnje stanje meditacije, kjer je s pomočjo čudnih glasbenih distrakcij priča istočasnim glasbenim halucinacijam. Zanimiv pa je tudi sam način, s katerim Joe Seaton ustvarja glasbo. Skupaj tke kompleksne kompozicije, zanimive in zelo posebne zvoke ter na odličen način predstavlja različna čustva preko glasbenega medija, kar je konec koncev pripomoglo k temu, da je dobila plata pri različnih medijih tako dobro oceno. Suzi Ecto je enostavno tehno ... ampak to na res, res zelo poseben način.
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

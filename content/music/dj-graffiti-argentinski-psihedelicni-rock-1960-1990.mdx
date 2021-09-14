@@ -5,9 +5,11 @@ date: "2014-11-29"
 slug: "dj-graffiti-argentinian-psychedelic-rock-1960-1990"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-11-29-argentinski-psihedeli%C4%8Dni-rock-1960-1990-34762.png
 ---
 
-![](https://radiostudent.si/glasba/dj-grafiti/argentinski-psihedeli%C4%8Dni-rock-1960-1990)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 Dvourna nabirka psihedeličnega argentinskega rocka od leta 1960 do 1990.
 
@@ -28,3 +30,19 @@ Dvourna nabirka psihedeličnega argentinskega rocka od leta 1960 do 1990.
 15. Los Natas - Tufi Meme
 
 <https://radiostudent.si/glasba/dj-grafiti/argentinski-psihedeli%C4%8Dni-rock-1960-1990>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

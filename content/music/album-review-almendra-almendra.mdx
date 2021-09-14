@@ -5,12 +5,30 @@ date: "2014-08-09"
 slug: "album-review-almendra-almendra"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-08-09-almendra-almendra-30488.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-08-09-almendra-almendra-30488.jpg?itok=3AMW_rRY)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 V tokratni oddaji Razširjamo obzorja bomo poslušali enega izmed albumov ki predstavljajo začetek argentinskega rocka, kasneje žanrsko preimenovan »državni rock«, ali špansko, »rock nacional«.
 
 **Almendra - Almendra (RCA Vik, 1969)**
 
 <https://radiostudent.si/glasba/raz%C5%A1irjamo-obzorja/almendra-almendra>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

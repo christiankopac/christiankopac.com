@@ -5,14 +5,32 @@ date: "2015-01-17"
 slug: "album-review-cold-busted-bust-free-16"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-01-17-razli%C4%8Dni-izvajalci-bust-free-16-36768.jpg
 ---
+
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 **Cold Busted, 2014**
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-01-17-razli%C4%8Dni-izvajalci-bust-free-16-36768.jpg?itok=sNGAM8q8)
-
 Kompilacijska plata losangeleške založbe Cold Busted pod vodstvom Derricka Daiseyja, znanega tudi kot DJ Vitamin D, ki nam v gratis obliki predstavlja dobro dozo inštrumentalnega hip-hopa in beatov.
 
-**[http://coldbusted.org/](http://coldbusted.org/)**
+[Cold Busted](http://coldbusted.org/)
 
 <https://radiostudent.si/glasba/raz%C5%A1irjamo-obzorja/razli%C4%8Dni-izvajalci-bust-free-16>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,9 +5,11 @@ date: "2020-07-28"
 slug: "radio-student-playlist-2020-07-28"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-07-28-seznam-skladb-za-28-7-2020-1600%E2%80%931900-christian-kopa%C4%8D-115917.jpeg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2020-07-28-seznam-skladb-za-28-7-2020-1600%E2%80%931900-christian-kopa%C4%8D-115917.jpeg?itok=7YoKmpdy)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Spiral Mind - Etheral Is She ( Spiral Mind 2019,?)
 2. Samuel Blues - Abraxas ( Samurai Shoes 2020,Samozaložba)
@@ -15,7 +17,7 @@ status: "published"
 4. S.O.N.S - Yamanote Underground Beach ( Shinjuku One Night Stand 2020,?)
 5. Fred Neil - Green Rocky Road (D-P-I Remix) ( O O O 2013,Hit+Run)
 6. Speaker Music - Of Our Spiritual Strivings (ft. Syanide) ( Black Nationalist Sonic Weaponry 2020,?)
-7. **ddeeppss** - untitled 4 ( tape 1 2017,Samozaložba)
+7. ddeeppss - untitled 4 ( tape 1 2017,Samozaložba)
 8. Goran Krmac - Hamar '93 ( Eppur Si Muove 2020,?)
 9. Skyzoo - A Song For Fathers ( Milestones 2020,?)
 10. Drill - Popeye feat. Bvana iz Lagune ( Ribolov z dinamitom 2018,?)
@@ -48,3 +50,19 @@ status: "published"
 37. fra fra - Naked (You Enter & Leave This World With Nothing) ( Funeral Songs 2020,Glitterbeat)
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-28-7-2020-1600%E2%80%931900-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

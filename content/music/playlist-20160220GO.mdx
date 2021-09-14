@@ -5,9 +5,11 @@ date: "2016-02-20"
 slug: "radio-student-playlist-2016-02-20"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2016-02-20-seznam-skladb-za-20-2-2016-1300-1800-christian-kopa%C4%8D-52633.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2016-02-20-seznam-skladb-za-20-2-2016-1300-1800-christian-kopa%C4%8D-52633.jpg?itok=52_pj2TO)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Punkappella - Wake Up
 2. Implog - Breakfast
@@ -92,3 +94,19 @@ status: "published"
 81. Moveknowledgement - Average Bear
 
 <https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-20-2-2016-1300-1800-christian-kopa%C4%8D>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,9 +5,11 @@ date: "2015-01-30"
 slug: "radio-student-playlist-2015-01-30"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-01-30-glasbene-opreme-seznam-skladb-za-30.1.2015-7.00-11.00-christian-kopa%C4%8D-37227.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-01-30-glasbene-opreme-seznam-skladb-za-30.1.2015-7.00-11.00-christian-kopa%C4%8D-37227.jpg?itok=vCwBCn1D)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Katapulto - Tamanoir (Anteater)
 2. Fingerprintz - Jabs
@@ -69,3 +71,19 @@ status: "published"
 58. Brane Završan & Žiga Golob - Sredi cesta / Road, the Middle
 
 https://radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-30-1-2015-700-1100-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

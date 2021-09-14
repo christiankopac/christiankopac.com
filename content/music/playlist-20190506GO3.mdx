@@ -5,9 +5,11 @@ date: "2019-05-06"
 slug: "radio-student-playlist-2019-05-06"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2019-05-06-seznam-skladb-za-6-5-2019-1500%E2%80%931900-christian-kopa%C4%8D-99898.JPG
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2019-05-06-seznam-skladb-za-6-5-2019-1500%E2%80%931900-christian-kopa%C4%8D-99898.JPG?itok=6hv0rcyp)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1 - Haruomi Hosono - Birthday Party (Yen Records, 1982)
 2 - Pilar Zeta - Moments Of Reality (Ultramajic, 2018)
@@ -56,3 +58,19 @@ status: "published"
 45 - Laibach - So Long, Farewell (Mute, 2018) –**[9. 5.: 🎉🎈V](https://www.facebook.com/events/2345856275636645/)\***\*[nove](https://www.facebook.com/events/2345856275636645/)\*\***[](https://www.facebook.com/events/2345856275636645/)\***\*[zmage](https://www.facebook.com/events/2345856275636645/)\*\***[! 50 let RŠ!: Laibach, Mimika Orchestra, Housewives, Jimmy Barka Experience, Seine @ Križanke, Ljubljana🥳🎊🥂](https://www.facebook.com/events/2345856275636645/)\*\*
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-6-5-2019-1500%E2%80%931900-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,9 +5,11 @@ date: "2016-03-28"
 slug: "radio-student-playlist-2016-03-28"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2016-03-28-seznam-skladb-za-28-3-2016-1100-1500-christian-kopa%C4%8D-54292.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2016-03-28-seznam-skladb-za-28-3-2016-1100-1500-christian-kopa%C4%8D-54292.jpg?itok=FeDxe2Gl)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Memotone - Abbots Bromley Horn Dance (03:59)
 2. Immix Ensemble & Vessel - What Hath God Wrought? (05:28)
@@ -65,4 +67,20 @@ status: "published"
 54. Timmies feat. Leirene - Dreams (03:20)
 55. DUPPY GUN PRODUCTIONS - LOVE DI PEOPLE (04:01)
 
-https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-28-3-2016-1100-1500-christian-kopa%C4%8D
+<https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-28-3-2016-1100-1500-christian-kopa%C4%8D>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

@@ -5,9 +5,11 @@ date: "2019-12-16"
 slug: "radio-student-playlist-2019-12-16"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2019-12-16-seznam-skladb-za-16-12-2019-1500%E2%80%931900-christian-kopa%C4%8D-107385.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2019-12-16-seznam-skladb-za-16-12-2019-1500%E2%80%931900-christian-kopa%C4%8D-107385.jpg?itok=D-cGah3x)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1 - rouge-ah - aching - bare (2018) [Kamizdat] - 03:48
 2 - J. McFarlane's Reality Guest - Human Tissue Act - Ta Da (2019) [Hobbies Galore] - 04:25
@@ -56,3 +58,19 @@ status: "published"
 45 - Prince - Purple Music - 1999 (Super Deluxe Edition) (2019) [The Prince Estate] - 10:59
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-16-12-2019-1500%E2%80%931900-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

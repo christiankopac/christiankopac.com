@@ -5,11 +5,13 @@ date: "2014-11-16"
 slug: "album-review-lee-gamble-koch"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-11-16-tolpa-bumov-lee-gamble-koch-34126.jpg
 ---
 
-**PAN, 2014**
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-11-16-tolpa-bumov-lee-gamble-koch-34126.jpg?itok=STHkVI9w)
+**PAN, 2014**
 
 Ko se producent odloči ustvariti novo dimenzijo, ki obstaja le in samo v naših možganih, je rezultat tega KOCH, zadnji album britanskega producenta Leeja Gambla. KOCH je tretji album, ki ga je Lee Gamble izdal pri berlinski založbi PAN.
 
@@ -27,4 +29,20 @@ Težko je razložiti tehniko in stil vsakega komada posebej, saj je album mišlj
 
 Album KOCH poslušalcu lahko služi tudi kot vstopna točka v artistično odkrivanje nadrealnega sveta. Leeju Gambleu je tako uspelo ustvariti album, ki pravilno deluje v različnih kontekstih. Neprijetnost in skrivnost, s katerima pridemo v stik že pri prvem komadu, se proti koncu albuma spremenita v znane in prijetne občutke, zaključimo pa lahko, da gre za odličen album, ki poleg svoje zvočne podobe predstavlja tudi svojevrstno psihedelično doživetje.
 
-https://radiostudent.si/glasba/tolpa-bumov/lee-gamble-koch
+<https://radiostudent.si/glasba/tolpa-bumov/lee-gamble-koch>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

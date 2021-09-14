@@ -5,9 +5,11 @@ date: "2021-05-10"
 slug: "radio-student-2021-05-10"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-05-10-seznam-skladb-za-10-5-2021-700%E2%80%931100-christian-kopa%C4%8D-125954.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2021-05-10-seznam-skladb-za-10-5-2021-700%E2%80%931100-christian-kopa%C4%8D-125954.jpg?itok=Bm_kT8m5)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Mia Doi Todd,Laraaji - Wainiha Valley
 2. Jim O'Rourke,Elliott Sharp - Kokytos
@@ -53,3 +55,19 @@ status: "published"
 42. Juan Piña Con La Revelacion - De Colombia Pa´ Venezuela
 
 https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-10-5-2021-700%E2%80%931100-christian-kopa%C4%8D
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

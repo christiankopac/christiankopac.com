@@ -5,9 +5,11 @@ date: "2015-02-22"
 slug: "radio-student-playlist-2015-02-22"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-02-22-glasbene-opreme-seznam-skladb-za-22.2.2015-13.00-18.00-christian-kopa%C4%8D-38431.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2015-02-22-glasbene-opreme-seznam-skladb-za-22.2.2015-13.00-18.00-christian-kopa%C4%8D-38431.jpg?itok=2EHYTk7t)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Dakota Suite & Quentin Sirjacq - Nu dat deze dag voorbij is
 2. Andrei Grammatik - Poslanica Duholovcima
@@ -100,3 +102,19 @@ status: "published"
 <https://radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-22-2-2015-1300-1800-christian-kopa%C4%8D>
 
 ![](https://i.imgur.com/aLtLJ0v.gif)
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

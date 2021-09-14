@@ -5,11 +5,13 @@ date: "2014-09-15"
 slug: "album-review-nun-nun"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-09-15-tolpa-bumov-nun-nun-31517.jpg
 ---
 
-**Aarght / Avant!, 2014**
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2014-09-15-tolpa-bumov-nun-nun-31517.jpg?itok=6tq1ltC9)
+**Aarght / Avant!, 2014**
 
 NUN je ime štiričlanske avstralske zasedbe, ki nam iz Melbourna pošilja obskurne in nagajive sint punk melodije, ki bi se z lahkoto uporabljale tudi na kakšnem hellektro plesišču.
 
@@ -31,3 +33,19 @@ Melodije, ki se razvijajo v več plasteh z uporabo enostavnih stereo trikov, mo�
 [**Bandcamp**](https://xxxnunxxx.bandcamp.com/)
 
 <https://radiostudent.si/glasba/tolpa-bumov/nun-nun>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>

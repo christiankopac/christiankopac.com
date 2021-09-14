@@ -5,9 +5,11 @@ date: "2016-03-11"
 slug: "radio-student-playlist-2021-03-11"
 category: "music"
 status: "published"
+embeddedImagesRemote:
+  - https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2016-03-11-seznam-skladb-za-11-3-2016-1500-1900-christian-kopa%C4%8D-53661.jpg
 ---
 
-![](https://radiostudent.si/sites/default/files/styles/thumbnail_w530/public/slike/2016-03-11-seznam-skladb-za-11-3-2016-1500-1900-christian-kopa%C4%8D-53661.jpg?itok=T4Sk0qG4)
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 1. Valerio Tricoli - Hic Labor Ille Domus et Inextricabilis Error (03:02) **~** [**11. 3.: Sonica Series XVIII: Valerio Tricoli @ MoTA Point, Ljubljana**](https://www.facebook.com/events/1725291814369924/)
 2. Mikael Seifu - The Protectors (01:50)
@@ -70,3 +72,19 @@ status: "published"
 59. Koolade - Dusk 'till Dawn (03:19) - [**11. 3.: Beat the Future w/ Koolade, Some1else, Maja Milich, Borka @ Skatepark Rog, Ljubljana**](https://www.facebook.com/events/1568892043430294/)
 
 <https://www.radiostudent.si/ostalo/glasbene-opreme/seznam-skladb-za-11-3-2016-1500-1900-christian-kopa%C4%8D>
+
+<div
+  style={{
+    gridArea: "1/1",
+    position: "relative",
+    placeItems: "center",
+    display: "grid",
+  }}
+>
+  <GatsbyImage
+    style={{ marginTop: "2em" }}
+    imgStyle={{ border: "3px dotted tomato" }}
+    alt=""
+    image={getImage(props.remoteImages[0])}
+  />
+</div>
