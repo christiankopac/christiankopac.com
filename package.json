@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
+    "gatsby-plugin-netlify": "^4.1.0",
     "prettier": "2.5.1"
   },
   "resolutions": {
