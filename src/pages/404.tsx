@@ -1,4 +1,4 @@
-/// @jsx jsx
+/** @jsxImportSource theme-ui */
 import React from "react"
 
 import { Heading, Text, jsx } from "theme-ui"
