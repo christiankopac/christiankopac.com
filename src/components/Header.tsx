@@ -1,4 +1,4 @@
-// @jsx jsx //
+/** @jsxImportSource theme-ui */
 import React, { FC } from "react"
 import { NavLink, jsx, useColorMode } from "theme-ui"
 import * as Logo from "../assets/logo.svg"

@@ -1,4 +1,4 @@
-/// @jsx jsx
+/** @jsxImportSource theme-ui */
 import { Link } from "gatsby"
 import React from "react"
 import { Box, Text, jsx, useColorMode } from "theme-ui"
