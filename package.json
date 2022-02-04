@@ -45,7 +45,7 @@
     "react-spring": "^9.4.2",
     "remark-emoji": "^3.0.2",
     "theme-ui": "^0.13.1",
-    "gatsby-plugin-netlify": "^4.1.0",
+    "gatsby-plugin-netlify": "^4.1.0"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
