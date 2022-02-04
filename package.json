@@ -41,11 +41,11 @@
     "react-pose": "^4.0.10",
     "react-spring": "^9.4.2",
     "remark-emoji": "^3.0.2",
-    "theme-ui": "0.13.1"
+    "theme-ui": "0.13.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0"
   },
   "devDependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
     "@tsconfig/recommended": "^1.0.1",
     "prettier": "2.5.1"
   },
