@@ -103,7 +103,7 @@ exports.onCreateNode = ({
         } catch (error) {
           console.error(error)
         }
-      })
+      }),
     )
   }
 }

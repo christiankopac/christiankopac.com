@@ -76,7 +76,7 @@ const PostPreview = props => {
                   | React.ReactNodeArray
                   | React.ReactPortal
                   | null
-                  | undefined
+                  | undefined,
               ) => (
                 <Box
                   style={{
@@ -97,7 +97,7 @@ const PostPreview = props => {
                 >
                   🔸 {tag}&nbsp;
                 </Box>
-              )
+              ),
             )}
           </Box>
         </Box>

@@ -5,12 +5,15 @@
 ### Major Updates Completed
 
 #### Core Framework Updates
+
 - ✅ **Gatsby**: v4.6.1 → v5.13.0
 - ✅ **React**: v17.0.2 → v18.3.0
 - ✅ **React DOM**: v17.0.2 → v18.3.0
 
 #### Gatsby Plugins Updated
+
 All Gatsby plugins updated to v5/v6 compatible versions:
+
 - gatsby-plugin-image: v2.6.0 → v3.13.0
 - gatsby-plugin-manifest: v4.6.0 → v5.13.0
 - gatsby-plugin-mdx: v3.6.0 → v5.13.0
@@ -21,31 +24,36 @@ All Gatsby plugins updated to v5/v6 compatible versions:
 - gatsby-source-filesystem: v4.6.0 → v5.13.0
 - gatsby-transformer-remark: v5.6.0 → v6.13.0
 - gatsby-transformer-sharp: v4.6.0 → v5.13.0
-- gatsby-remark-* plugins all updated to v6/v7
+- gatsby-remark-\* plugins all updated to v6/v7
 
 #### MDX Updates
+
 - @mdx-js/mdx: v1.0.0 → v2.3.0
 - @mdx-js/react: v1.6.22 → v2.3.0
 
 #### Theme UI & Styling
+
 - theme-ui: v0.13.1 → v0.16.0
 - @theme-ui/presets: v0.13.1 → v0.16.0
 - @emotion/react: v11.7.1 → v11.13.0
 - @emotion/styled: v11.6.0 → v11.13.0
 
 #### Other Dependencies
+
 - gsap: v3.9.1 → v3.12.5
 - prismjs: v1.26.0 → v1.29.0
 - react-spring: v9.4.2 → v9.7.0
 - remark-emoji: v3.0.2 → v4.0.1
 
 #### Dev Dependencies
+
 - prettier: v2.5.1 → v3.3.0
 - typescript: Added v5.5.0
 
 ### Packages Removed
 
 #### Deprecated Packages
+
 - ❌ **gatsby-image** - Replaced by gatsby-plugin-image (modern image component)
 - ❌ **gatsby-plugin-transition-link** - Had peer dependency conflicts with React 18
 - ❌ **react-pose** - Deprecated animation library
@@ -54,6 +62,7 @@ All Gatsby plugins updated to v5/v6 compatible versions:
 ### Configuration Changes
 
 #### gatsby-config.js
+
 1. **gatsby-plugin-mdx**: Removed `defaultLayouts` option (deprecated in v5)
    - Layouts should now be handled via wrapper components or page templates
 
@@ -61,6 +70,7 @@ All Gatsby plugins updated to v5/v6 compatible versions:
    - This option was deprecated as Gatsby no longer adds preload headers
 
 #### Resolution Updates
+
 - graphql: ^15.4.0 → ^16.8.0
 - webpack: ^5.24.2 → ^5.90.0
 - Removed graphql-compose resolution (no longer needed)
@@ -68,14 +78,17 @@ All Gatsby plugins updated to v5/v6 compatible versions:
 ### Known Issues
 
 #### Sharp Installation (Build Environment)
+
 The `sharp` image processing library requires native binaries that failed to download in the current build environment due to proxy restrictions. This is expected to work correctly in production environments (Netlify, Vercel, etc.).
 
 **If you encounter Sharp errors:**
+
 ```bash
 npm rebuild sharp --platform=linux --arch=x64
 ```
 
 Or in production/deployment:
+
 ```bash
 npm install --legacy-peer-deps
 ```
@@ -101,11 +114,13 @@ The `--ignore-scripts` flag was used during migration to bypass Sharp's postinst
 ### Security Vulnerabilities
 
 Some dependencies still have warnings (see `npm audit`). Most are:
+
 - Low/moderate severity
 - In transitive dependencies
 - Waiting for upstream package updates
 
 Notable vulnerabilities to monitor:
+
 - `gatsby-plugin-react-svg` depends on deprecated packages
 - Some Babel plugins show deprecation warnings (functionality still works)
 
@@ -120,6 +135,7 @@ Notable vulnerabilities to monitor:
 ### Deployment Instructions
 
 When deploying:
+
 1. Ensure Node.js version is 18.x or higher
 2. Use `npm install --legacy-peer-deps` during build
 3. Sharp should compile automatically in CI/CD environments

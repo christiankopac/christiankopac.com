@@ -14,7 +14,6 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## TODO
 
-
 - [x] light/dark mode switch
 - [x] mdx support
 - [x] theme-ui

@@ -35,17 +35,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - // "gatsby-plugin-prefetch-google-fonts": "^1.0.11",
 
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Work Sans`,
-          },
-          {
-            family: `Bitter`,
-          },
-        ],
-      },
+    resolve: `gatsby-plugin-prefetch-google-fonts`,
+    options: {
+    fonts: [
+    {
+    family: `Work Sans`,
+    },
+    {
+    family: `Bitter`,
+    },
+    ],
+    },
     },
 
 ```
