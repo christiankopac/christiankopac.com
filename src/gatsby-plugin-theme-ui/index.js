@@ -3,6 +3,7 @@ import { base } from "@theme-ui/presets"
 const theme = {
   ...base,
   initialColorModeName: "dark",
+  useColorSchemeMediaQuery: false,
   useLocalStorage: true,
   breakpoints: ["66em", "66em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
