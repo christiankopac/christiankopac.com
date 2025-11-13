@@ -24,10 +24,10 @@ This shall by considered a living document and a personal reference or go-to pla
 export const pageQuery = graphql`
   query {
     allMdx(
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { status: { eq: "published" } }
-        fileAbsolutePath: { regex: "/blog/" }
+        internal: { contentFilePath: { regex: "/blog/" } }
       }
     ) {
       nodes {
