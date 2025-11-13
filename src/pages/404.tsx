@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
     <Heading as="h1" sx={{ fontSize: "8em" }}>
       404: Not Found
     </Heading>
@@ -16,3 +15,5 @@ const NotFoundPage = () => (
 )
 
 export default NotFoundPage
+
+export const Head = () => <SEO title="404: Not found" />

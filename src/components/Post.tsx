@@ -7,7 +7,6 @@ import SEO from "./seo"
 
 const PostTemplate = ({ data: { mdx }, children }) => (
   <Layout>
-    <SEO title={mdx.frontmatter.title} />
     <article role="main">
       <Heading as="h1" sx={{ color: "primary", fontSize: 6 }}>
         {mdx.frontmatter.title}
@@ -19,6 +18,8 @@ const PostTemplate = ({ data: { mdx }, children }) => (
     </footer>
   </Layout>
 )
+
+export const Head = ({ data: { mdx } }) => <SEO title={mdx.frontmatter.title} />
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
