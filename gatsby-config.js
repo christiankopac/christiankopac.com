@@ -10,17 +10,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {}, // option to add more headers
-        allPageHeaders: [], // option to add headers for all pages
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,

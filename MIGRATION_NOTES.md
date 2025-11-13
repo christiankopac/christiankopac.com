@@ -58,6 +58,7 @@ All Gatsby plugins updated to v5/v6 compatible versions:
 - ❌ **gatsby-plugin-transition-link** - Had peer dependency conflicts with React 18
 - ❌ **react-pose** - Deprecated animation library
 - ❌ **gatsby-transformer-mdx-content-pages** - No longer maintained
+- ❌ **gatsby-plugin-netlify** - Replaced by gatsby-adapter-netlify (auto-installed by Netlify in Gatsby v5)
 
 ### Configuration Changes
 
@@ -66,8 +67,16 @@ All Gatsby plugins updated to v5/v6 compatible versions:
 1. **gatsby-plugin-mdx**: Removed `defaultLayouts` option (deprecated in v5)
    - Layouts should now be handled via wrapper components or page templates
 
-2. **gatsby-plugin-netlify**: Removed `mergeLinkHeaders` option
-   - This option was deprecated as Gatsby no longer adds preload headers
+2. **gatsby-plugin-netlify**: Completely removed from configuration
+   - Gatsby v5 uses adapters instead of deployment plugins
+   - Netlify automatically installs and uses `gatsby-adapter-netlify`
+   - Headers and redirects now configured in `netlify.toml`
+
+#### gatsby-node.js
+
+1. **GraphQL query updates for MDX v2**:
+   - Changed `fileAbsolutePath` to `internal.contentFilePath`
+   - Required for Gatsby v5 compatibility with MDX nodes
 
 #### Resolution Updates
 

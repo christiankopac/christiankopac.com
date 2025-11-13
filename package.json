@@ -40,8 +40,7 @@
     "react-helmet": "^6.1.0",
     "react-spring": "^9.7.0",
     "remark-emoji": "^4.0.1",
-    "theme-ui": "^0.16.0",
-    "gatsby-plugin-netlify": "^5.1.0"
+    "theme-ui": "^0.16.0"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.7",

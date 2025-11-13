@@ -33,7 +33,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   return graphql(`
     {
-      blog: allMdx(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
+      blog: allMdx(filter: { internal: { contentFilePath: { regex: "/blog/" } } }) {
         edges {
           node {
             id
@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      music: allMdx(filter: { fileAbsolutePath: { regex: "/music/" } }) {
+      music: allMdx(filter: { internal: { contentFilePath: { regex: "/music/" } } }) {
         edges {
           node {
             id
