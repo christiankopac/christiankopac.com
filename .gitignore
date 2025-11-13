@@ -104,3 +104,7 @@ yarn-error.log
 .yarn-integrity
 
 .history
+
+# Netlify
+
+.netlify
