@@ -33,7 +33,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   return graphql(`
     {
-      blog: allMdx(filter: { internal: { contentFilePath: { regex: "/blog/" } } }) {
+      blog: allMdx(filter: {
+        internal: { contentFilePath: { regex: "/blog/" } },
+        frontmatter: { status: { ne: "draft" } }
+      }) {
         edges {
           node {
             id
@@ -44,7 +47,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      music: allMdx(filter: { internal: { contentFilePath: { regex: "/music/" } } }) {
+      music: allMdx(filter: {
+        internal: { contentFilePath: { regex: "/music/" } },
+        frontmatter: { status: { ne: "draft" } }
+      }) {
         edges {
           node {
             id
@@ -90,23 +96,28 @@ exports.onCreateNode = async ({
     node.frontmatter &&
     node.frontmatter.embeddedImagesRemote
   ) {
-    return Promise.all(
-      node.frontmatter.embeddedImagesRemote.map(async url => {
-        try {
-          return await createRemoteFileNode({
-            url,
-            parentNodeId: node.id,
-            createNode,
-            createNodeId,
-            cache,
-            store,
-          })
-        } catch (error) {
-          reporter.warn(`Failed to fetch remote image: ${url}`)
-          reporter.warn(error.message)
-          return null // Skip this image and continue
-        }
-      }),
-    )
+    try {
+      const results = await Promise.allSettled(
+        node.frontmatter.embeddedImagesRemote.map(async url => {
+          try {
+            return await createRemoteFileNode({
+              url,
+              parentNodeId: node.id,
+              createNode,
+              createNodeId,
+              cache,
+              store,
+            })
+          } catch (error) {
+            reporter.warn(`Failed to fetch remote image: ${url}`)
+            return null // Skip this image and continue
+          }
+        }),
+      )
+      return results.map(r => (r.status === "fulfilled" ? r.value : null)).filter(Boolean)
+    } catch (error) {
+      reporter.warn(`Error processing remote images for node ${node.id}`)
+      return []
+    }
   }
 }

@@ -50,9 +50,12 @@
   "engines": {
     "node": ">=18.20.0"
   },
+  "overrides": {
+  },
   "resolutions": {
     "graphql": "^16.8.0",
-    "webpack": "^5.90.0"
+    "webpack": "^5.90.0",
+    "ajv": "6.12.6"
   },
   "keywords": [
     "gatsby"
