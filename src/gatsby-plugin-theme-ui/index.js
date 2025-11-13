@@ -61,9 +61,16 @@ const theme = {
   },
   styles: {
     ...base.styles,
+    root: {
+      fontFamily: "body",
+      lineHeight: "body",
+      fontWeight: "body",
+    },
     body: {
       margin: 0,
       padding: 0,
+      backgroundColor: "background",
+      color: "text",
     },
     h1: {
       color: "primary",
