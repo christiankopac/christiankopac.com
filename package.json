@@ -7,7 +7,7 @@
   "dependencies": {
     "ajv": "6.12.6",
     "ajv-keywords": "3.5.2",
-    "ajv-formats": "1.6.1",
+    "ajv-formats": "1.5.1",
     "@babel/plugin-proposal-decorators": "^7.24.0",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
@@ -56,7 +56,7 @@
   "overrides": {
     "ajv": "6.12.6",
     "ajv-keywords": "3.5.2",
-    "ajv-formats": "1.6.1"
+    "ajv-formats": "1.5.1"
   },
   "resolutions": {
     "graphql": "^16.8.0",
