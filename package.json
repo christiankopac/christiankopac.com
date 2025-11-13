@@ -51,6 +51,10 @@
   "engines": {
     "node": ">=18.20.0"
   },
+  "overrides": {
+    "ajv": "6.12.6",
+    "ajv-keywords": "3.5.2"
+  },
   "resolutions": {
     "graphql": "^16.8.0",
     "webpack": "^5.90.0",
