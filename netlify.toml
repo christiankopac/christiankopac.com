@@ -24,10 +24,6 @@
 [build.processing.images]
   compress = true
 
-# Plugin configuration
-[[plugins]]
-  package = "gatsby-plugin-netlify"
-
 # Headers for security and caching
 [[headers]]
   for = "/*"

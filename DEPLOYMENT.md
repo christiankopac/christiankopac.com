@@ -32,11 +32,14 @@ The `--legacy-peer-deps` flag is required due to some peer dependency warnings i
 
 Netlify will automatically:
 
+- Detect and use `@netlify/plugin-gatsby` for Gatsby-specific optimizations
 - Bundle and minify CSS
 - Bundle and minify JavaScript
 - Compress images
 - Generate pretty URLs
 - Set appropriate cache headers
+
+**Note:** The `gatsby-plugin-netlify` package in your Gatsby config (gatsby-config.js) generates `_headers` and `_redirects` files during the build. Netlify automatically processes these files - no additional Netlify Build plugins are needed.
 
 ### Security Headers
 
