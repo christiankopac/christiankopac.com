@@ -12,7 +12,6 @@
     "@mdx-js/react": "^2.3.0",
     "@theme-ui/presets": "^0.16.0",
     "@types/mdx-js__react": "^1.5.8",
-    "ajv": "6.12.6",
     "gatsby": "^5.13.0",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-manifest": "^5.13.0",
@@ -52,14 +51,14 @@
     "node": ">=18.20.0"
   },
   "overrides": {
-    "ajv": "6.12.6",
-    "ajv-keywords": "3.5.2",
-    "ajv-formats": "1.6.1"
+    "terser-webpack-plugin": "^5.3.10",
+    "ajv-keywords": "^5.1.0",
+    "ajv-formats": "^2.1.1",
+    "ajv": "^8.12.0"
   },
   "resolutions": {
     "graphql": "^16.8.0",
-    "webpack": "^5.90.0",
-    "ajv": "6.12.6"
+    "webpack": "^5.90.0"
   },
   "keywords": [
     "gatsby"
