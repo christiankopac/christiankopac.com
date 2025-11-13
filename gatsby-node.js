@@ -77,12 +77,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-exports.onCreateNode = ({
+exports.onCreateNode = async ({
   node,
   createNodeId,
   actions: { createNode },
   cache,
   store,
+  reporter,
 }) => {
   if (
     node.internal.type === "Mdx" &&
@@ -90,9 +91,9 @@ exports.onCreateNode = ({
     node.frontmatter.embeddedImagesRemote
   ) {
     return Promise.all(
-      node.frontmatter.embeddedImagesRemote.map(url => {
+      node.frontmatter.embeddedImagesRemote.map(async url => {
         try {
-          return createRemoteFileNode({
+          return await createRemoteFileNode({
             url,
             parentNodeId: node.id,
             createNode,
@@ -101,7 +102,9 @@ exports.onCreateNode = ({
             store,
           })
         } catch (error) {
-          console.error(error)
+          reporter.warn(`Failed to fetch remote image: ${url}`)
+          reporter.warn(error.message)
+          return null // Skip this image and continue
         }
       }),
     )
