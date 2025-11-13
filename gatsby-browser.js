@@ -4,5 +4,11 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+const React = require("react")
+const Layout = require("./src/components/Layout").default
+
 require("prismjs/themes/prism-solarizedlight.css")
+
+exports.wrapPageElement = ({ element, props }) => {
+  return <Layout {...props}>{element}</Layout>
+}

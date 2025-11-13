@@ -1,12 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import Layout from "../components/Layout"
 import { Heading } from "theme-ui"
 import SEO from "./seo"
 
 const PostTemplate = ({ data: { mdx }, children }) => (
-  <Layout>
+  <>
     <article role="main">
       <Heading as="h1" sx={{ color: "primary", fontSize: 6 }}>
         {mdx.frontmatter.title}
@@ -16,7 +15,7 @@ const PostTemplate = ({ data: { mdx }, children }) => (
     <footer style={{ marginTop: "3em" }}>
       Published on {mdx.frontmatter.date}
     </footer>
-  </Layout>
+  </>
 )
 
 export const Head = ({ data: { mdx } }) => <SEO title={mdx.frontmatter.title} />
