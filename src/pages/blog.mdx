@@ -3,8 +3,6 @@ import { jsx } from "theme-ui"
 import SEO from "../components/seo"
 import PostPreview from "../components/PostPreview"
 
-<SEO title="Blog" />
-
 # Blog
 
 Here I usually keep some of the learning related to personal projects, development and other technical stuff.
@@ -21,17 +19,18 @@ This shall by considered a living document and a personal reference or go-to pla
   ))}
 </ul>
 
+export const Head = () => <SEO title="Blog" />
+
 export const pageQuery = graphql`
   query {
     allMdx(
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { status: { eq: "published" } }
-        fileAbsolutePath: { regex: "/blog/" }
+        internal: { contentFilePath: { regex: "/blog/" } }
       }
     ) {
       nodes {
-        slug
         frontmatter {
           title
           date

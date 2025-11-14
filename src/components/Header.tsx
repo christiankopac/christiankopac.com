@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React, { FC } from "react"
-import { NavLink, jsx, useColorMode } from "theme-ui"
+import { jsx, useColorMode } from "theme-ui"
 import * as Logo from "../assets/logo.svg"
 import { Link } from "gatsby"
 
@@ -68,7 +68,7 @@ const Header: FC<any> = props => {
         </li>
         {routes.map(({ href, title }) => {
           return (
-            <li key="title" sx={{ listStyle: "none" }}>
+            <li key={title} sx={{ listStyle: "none" }}>
               <Link
                 partiallyActive={true}
                 activeClassName="active"

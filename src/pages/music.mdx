@@ -3,8 +3,6 @@ import { jsx } from "theme-ui"
 import SEO from "../components/seo"
 import PostPreview from "../components/PostPreview"
 
-<SEO title="Music" />
-
 # Music
 
 Music has alway been a big and important part of my life, as with [many other human beings](https://en.wikipedia.org/wiki/History_of_music).
@@ -28,17 +26,18 @@ Below you can find some of the music selections I've made for the radio station 
   ))}
 </ul>
 
+export const Head = () => <SEO title="Music" />
+
 export const pageQuery = graphql`
   query {
     allMdx(
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { status: { eq: "published" } }
-        fileAbsolutePath: { regex: "/music/" }
+        internal: { contentFilePath: { regex: "/music/" } }
       }
     ) {
       nodes {
-        slug
         frontmatter {
           title
           date

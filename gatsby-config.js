@@ -10,18 +10,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
-        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
@@ -36,6 +24,13 @@ module.exports = {
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
     // {
     //   resolve: `gatsby-transformer-mdx-content-pages`,
     //   options: {
@@ -46,9 +41,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: {
-          default: require.resolve(`./src/components/Layout.tsx`),
-        },
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           {
@@ -77,7 +69,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
