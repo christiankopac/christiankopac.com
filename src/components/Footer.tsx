@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import FullscreenModal from "./FullscreenModal"
-import { Text } from "theme-ui"
+import { Text, Link } from "theme-ui"
 
 interface FooterProps {
   props?: any
@@ -12,7 +12,7 @@ const Footer: FC<FooterProps> = props => {
   return (
     <footer {...props}>
       <Text sx={{ fontFamily: "monospace", fontSize: ".8em" }}>
-        Christian Kopač &copy; {date.getFullYear()}
+        Christian <Link href="https://kopac.ch">Kopač</Link> &copy; {date.getFullYear()}
       </Text>
       <br />
       <FullscreenModal />
